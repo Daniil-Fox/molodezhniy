@@ -1,0 +1,116 @@
+.place {
+  padding: 7.5rem 0;
+
+  &__title {
+    margin-bottom: 2.2rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 5.2rem;
+    font-size: 3rem;
+  }
+
+  &__map {
+    height: 70rem;
+    background-color: #ccc;
+    border-radius: 3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+
+    z-index: 10;
+    top: 5rem;
+    left: 5rem;
+    bottom: 5rem;
+  }
+}
+
+.place-content {
+  width: 36rem;
+
+  background-color: #fff;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.07);
+
+  mask-image: url("./../img/place/mask.svg");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  overflow: hidden;
+  border-radius: 3rem;
+  &__img {
+    width: 100%;
+    height: 30rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 3.3rem;
+    padding-top: 2.5rem;
+    padding-right: 3.7rem;
+  }
+
+  &__address,
+  &__tel {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+    color: var(--black);
+  }
+  &__address {
+    margin-bottom: 0.5rem;
+  }
+  &__tel {
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 3.3rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 1rem 0.2rem;
+    padding-top: 0.7rem;
+  }
+}
+
+.place-form {
+  margin-bottom: 1rem;
+  position: relative;
+  &__input {
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 4rem;
+    border: 2px solid var(--base-grey);
+    border-radius: 1rem;
+    padding: 0.2rem 2rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+
+    &::placeholder {
+      color: var(--base-grey);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    width: 100%;
+    border-radius: 1rem;
+
+    padding: 0.8rem;
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --font-family: "Golos Text", sans-serif;
+  --second-family: "Commissioner", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --content-width: 180.5rem;
+  --container-offset: 4rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  @media (max-width: 576px) {
+    --container-offset: 2.8rem;
+  }
+  --white: #fff;
+  --black: #000;
+  --pink: #ff326e;
+  --cyan: #28c6d4;
+  --green: #0cc112;
+  --orange: #ff6b00;
+  --blue: #0088fe;
+  --light-grey: #d9d9d9;
+  --base-grey: #b3b3b3;
+  --dark-grey: #666;
+  --30-black: #fff;
+}

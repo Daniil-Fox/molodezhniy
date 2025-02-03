@@ -1,0 +1,236 @@
+<section class="place">
+  <div class="container">
+    <h2 class="title3 centered place__title">Расположение</h2>
+    <p class="place__subtitle subtitle1 centered">
+      <span>Снеговая Падь</span> — молодой активно развивающийся район
+    </p>
+
+    <div class="place__map" id="map">
+      <div class="place__content place-content">
+        <div class="place-content__img">
+          <img src="./img/place/01.webp" alt="" />
+        </div>
+        <div class="place-content__content">
+          <p class="place-content__address">ул. Адмирала Горшкова, 8</p>
+          <a href="tel:+7 423 287 77 27" class="place-content__tel">
+            +7 423 287 77 27
+          </a>
+
+          <form class="place-content__form place-form">
+            <input
+              type="text"
+              placeholder="Введите ваш адрес"
+              class="place-form__input"
+              id="address"
+              autocomplete="off"
+            />
+            <div id="suggestions"></div>
+            <button class="btn-reset btn btn--orange place-form__btn" disabled>
+              Проложить маршрут
+            </button>
+          </form>
+          <div class="place-content__buttons">
+            <button class="btn-reset place-content__btn btn btn--dark">
+              Яндекс Карты
+            </button>
+            <button class="btn-reset place-content__btn btn btn--dark">
+              Google Maps
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  ymaps.ready(function () {
+    const ourCompany = [43.162565, 131.94896];
+    let suggestionsDiv = document.getElementById("suggestions");
+    let activeIndex = -1;
+    let markers = [];
+    let multiRoute;
+    var myMap = new ymaps.Map(
+        "map",
+        {
+          center: ourCompany,
+          zoom: 14,
+        },
+        {
+          searchControlProvider: "yandex#search",
+        }
+      ),
+      myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(),
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/placemark.svg",
+          iconImageSize: [30, 30],
+          iconImageOffset: [0, -34],
+        }
+      );
+
+    myMap.geoObjects.add(myPlacemark);
+
+    const placeForm = document.querySelector(".place-form");
+
+    if (placeForm) {
+      const input = placeForm.querySelector(".place-form__input");
+      const btn = placeForm.querySelector(".place-form__btn");
+      const ourAddressPlacemark = [];
+      function checkDisabled() {
+        if (input.value !== "") {
+          btn.removeAttribute("disabled");
+        } else {
+          btn.setAttribute("disabled", "");
+        }
+      }
+      input.addEventListener("input", () => {
+        checkDisabled();
+        let query = input.value;
+
+        if (query.length < 3) {
+          suggestionsDiv.style.display = "none";
+          return;
+        }
+        query = "Владивосток, " + query;
+        fetch(
+          "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Token 4d19c67436fb1dd506158003fd2c419d4f6155a0", // Замените на ваш токен
+            },
+            body: JSON.stringify({ query }),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            suggestionsDiv.innerHTML = "";
+            if (data.suggestions.length) {
+              suggestionsDiv.style.display = "block";
+              data.suggestions.forEach((suggestion, index) => {
+                const item = document.createElement("div");
+                item.dataset.suggestion = JSON.stringify(suggestion);
+                // Вывод короткого адреса
+                const shortAddress = suggestion.value;
+
+                item.textContent = shortAddress; // Отображаем адрес
+                item.classList.add("suggestion-item");
+
+                // Клик по подсказке
+                item.addEventListener("click", function () {
+                  selectSuggestion(suggestion);
+                });
+                item.dataset.index = index;
+                suggestionsDiv.appendChild(item);
+              });
+            } else {
+              suggestionsDiv.style.display = "none";
+            }
+          })
+          .catch((error) => console.error("Ошибка:", error));
+      });
+
+      input.addEventListener("keydown", function (event) {
+        const items = suggestionsDiv.getElementsByClassName("suggestion-item");
+
+        if (event.key === "ArrowDown") {
+          activeIndex = (activeIndex + 1) % items.length; // Переход к следующему элементу
+          updateActiveItem(items);
+        } else if (event.key === "ArrowUp") {
+          activeIndex = (activeIndex - 1 + items.length) % items.length; // Переход к предыдущему элементу
+          updateActiveItem(items);
+        } else if (event.key === "Enter" && activeIndex > -1) {
+          event.preventDefault();
+          selectSuggestion(JSON.parse(items[activeIndex].dataset.suggestion)); // Используем JSON для хранения объекта
+        }
+      });
+
+      function addMarker(coords, name) {
+        const placemark = new ymaps.Placemark(coords, { balloonContent: name });
+        myMap.geoObjects.add(placemark);
+        markers.push(placemark); // Сохраняем метку в массив
+      }
+
+      function addRoute(startCoords, endCoords) {
+        multiRoute = new ymaps.multiRouter.MultiRoute({
+          referencePoints: [startCoords, endCoords],
+        });
+
+        myMap.geoObjects.add(multiRoute);
+      }
+
+      function selectSuggestion(suggestion) {
+        input.value = suggestion.value;
+        suggestionsDiv.style.display = "none";
+
+        const coordinates = {
+          lat: suggestion.data.geo_lat, // Широта
+          lon: suggestion.data.geo_lon, // Долгота
+        };
+        ourAddressPlacemark[0] = coordinates;
+      }
+
+      function clearMap(exceptMarker) {
+        // Удаление всех меток
+        markers.forEach((marker) => {
+          if (marker !== exceptMarker) {
+            myMap.geoObjects.remove(marker);
+          }
+        });
+
+        // Очистка маршрутов
+        if (multiRoute) {
+          myMap.geoObjects.remove(multiRoute);
+        }
+      }
+
+      function updateActiveItem(items) {
+        [...items].forEach((item) => {
+          item.classList.remove("active"); // Убираем класс активности у всех элементов
+        });
+        if (items[activeIndex]) {
+          items[activeIndex].classList.add("active"); // Добавляем класс к активному элементу
+        }
+      }
+      document.addEventListener("click", function (event) {
+        if (!suggestionsDiv.contains(event.target)) {
+          suggestionsDiv.style.display = "none";
+        }
+      });
+      input.addEventListener("focus", checkDisabled);
+      input.addEventListener("focusout", checkDisabled);
+      input.addEventListener("change", checkDisabled);
+
+      placeForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let serachingAddress = input.value;
+        if (input.value.indexOf("Владивосток") == -1)
+          serachingAddress = "Владивосток," + input.value;
+        fetch(
+          `https://nominatim.openstreetmap.org/search?q=${serachingAddress}&format=json`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.length > 1 && !ourAddressPlacemark[0]) {
+              const { lat, lon } = data[0];
+              ourAddressPlacemark[0] = { lat, lon };
+            }
+
+            clearMap(null);
+            addMarker(
+              [ourAddressPlacemark[0].lat, ourAddressPlacemark[0].lon],
+              ""
+            );
+
+            addRoute(ourCompany, [
+              ourAddressPlacemark[0].lat,
+              ourAddressPlacemark[0].lon,
+            ]);
+          });
+      });
+    }
+  });
+</script>

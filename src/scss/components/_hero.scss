@@ -1,0 +1,127 @@
+.hero {
+  margin-bottom: 6rem;
+  padding: 7rem 0;
+  position: relative;
+  @include mobile {
+    padding-bottom: 3rem;
+    margin: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -93rem;
+    top: -31.2rem;
+    width: 149.4rem;
+    height: 142.8rem;
+    transform: rotate(-49.95deg);
+    background-image: url("./../img/lines/main1.svg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      width: 73rem;
+      height: 73rem;
+      left: -49rem;
+      top: 0.7rem;
+      transform: rotate(-26.11deg);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    min-height: 78.7rem;
+    border-radius: 3rem;
+    mask-image: url("./../img/main-mask.svg");
+    mask-size: 100% 100%;
+    background-image: linear-gradient(225deg, #66a2f7 0%, #bfdbff 100%);
+
+    @include mobile {
+      position: relative;
+      min-height: 97rem;
+      flex-direction: column;
+      mask-image: url("./../img/main-mask-mobile.svg");
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__content {
+    background-color: #fff;
+    padding: 6rem 8.4rem;
+    padding-bottom: 8.1rem;
+    padding-right: 11rem;
+    max-width: 81.1rem;
+    width: 100%;
+
+    mask-image: url("./../img/mask-content.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    @include mobile {
+      padding: 4.2rem;
+      padding-top: 2.6rem;
+      mask-size: 100% auto;
+      mask-image: url("./../img/mask-content-mobile.svg");
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 3rem;
+    @include mobile {
+      flex-direction: column;
+      gap: 1.2rem;
+      max-width: 38.6rem;
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 0.75rem;
+    @include mobile {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 4.5rem;
+    max-width: 46rem;
+
+    @include mobile {
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  &__btn {
+    padding: 1.7rem 2.8rem;
+    padding-top: 1.3rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border-width: 0.25rem;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0.43rem;
+    width: auto;
+    height: 106.8%;
+    overflow: hidden;
+    border-radius: 0 0 3rem 0;
+
+    @include mobile {
+      height: 65.6rem;
+      width: auto;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      @include mobile {
+        object-position: bottom;
+        width: auto;
+      }
+    }
+  }
+}
