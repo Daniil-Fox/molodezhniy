@@ -139,12 +139,64 @@
           <a href="tel:+7 423 287 77 27" class="header__tel">
             +7 423 287 77 27
           </a>
-          <button class="btn-reset header__recall">Заказать звонок</button>
+          <button class="btn-reset header__recall modal-btn">
+            Заказать звонок
+          </button>
         </div>
       </div>
     </div>
   </div>
 </header>
+<div class="modal modal--recall">
+  <div class="modal__body">
+    <div class="modal__header">
+      <div class="modal__title">Заказать звонок</div>
+      <button class="btn-reset modal__close">
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L42 42M42 2L2 42"
+            stroke="black"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="cta-form modal__form">
+      <div class="modal__row">
+        <input
+          type="text"
+          name="Имя"
+          placeholder="Укажите ваше имя"
+          class="cta-form__input"
+        />
+        <input
+          type="tel"
+          name="Телефон"
+          placeholder="Ваш контактный телефон"
+          class="cta-form__input"
+        />
+      </div>
+      <div class="modal__row">
+        <button class="btn btn-reset btn--pink modal__btn cta-form__btn">
+          Оставить заявку
+        </button>
+        <small class="cta-form__agree">
+          Нажимая кнопку «Отправить заявку», вы соглашаетесь с&nbsp;<a href="#"
+            >политикой обработки персональных данных</a
+          >
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+
 
       <main class="main">
         <section class="hero">
@@ -648,46 +700,100 @@
       <div class="cta__content">
         <h3 class="title3 cta__title">Посчитайте вашу выгоду</h3>
         <form action="#" class="cta__form cta-form">
-          <div class="cta-form__wrapper">
-            <label for="ct1" class="cta-form__label">Стоимость квартиры</label>
-            <div class="cta-form__inwrapper">
-              <input
-                type="number"
-                min="6500000"
-                placeholder="от 6 500 000 ₽"
-                class="cta-form__input"
-                id="ct1"
-              />
+          <div class="modal modal--blue active">
+  <div class="modal__body">
+    <div class="modal__header">
+      <div class="modal__title">Введите данные для&nbsp;связи</div>
+      <button class="btn-reset modal__close">
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L42 42M42 2L2 42"
+            stroke="black"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="cta-form modal__form">
+      <div class="modal__row">
+        <input
+          type="text"
+          name="Имя"
+          placeholder="Укажите ваше имя"
+          class="cta-form__input"
+        />
+        <input
+          type="tel"
+          name="Телефон"
+          placeholder="Ваш контактный телефон"
+          class="cta-form__input"
+        />
+      </div>
+      <div class="modal__row">
+        <button class="btn btn-reset btn--blue modal-btn-blue cta-form__btn">
+          Оставить заявку
+        </button>
+        <small class="cta-form__agree">
+          Нажимая кнопку «Отправить заявку», вы соглашаетесь с&nbsp;<a href="#"
+            >политикой обработки персональных данных</a
+          >
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+
+          <div class="cta-form__parent">
+            <div class="cta-form__wrapper">
+              <label for="ct1" class="cta-form__label"
+                >Стоимость квартиры</label
+              >
+              <div class="cta-form__inwrapper">
+                <input
+                  type="number"
+                  min="6500000"
+                  placeholder="от 6 500 000 ₽"
+                  class="cta-form__input"
+                  id="ct1"
+                />
+              </div>
             </div>
-          </div>
-          <div class="cta-form__wrapper">
-            <label for="ct2" class="cta-form__label"
-              >Первоначальный взнос</label
-            >
-            <div class="cta-form__inwrapper" data-after="0%">
-              <input
-                type="text"
-                placeholder="2 235 240 ₽"
-                class="cta-form__input"
-                id="ct2"
-              />
+            <div class="cta-form__wrapper">
+              <label for="ct2" class="cta-form__label"
+                >Первоначальный взнос</label
+              >
+              <div class="cta-form__inwrapper" data-after="0%">
+                <input
+                  type="text"
+                  placeholder="2 235 240 ₽"
+                  class="cta-form__input"
+                  id="ct2"
+                />
+              </div>
             </div>
-          </div>
-          <div class="cta-form__wrapper">
-            <label for="ct2" class="cta-form__label">Срок кредита</label>
-            <div class="cta-form__inwrapper">
-              <input
-                type="text"
-                placeholder="30 лет"
-                class="cta-form__input"
-                id="ct2"
-              />
+            <div class="cta-form__wrapper">
+              <label for="ct2" class="cta-form__label">Срок кредита</label>
+              <div class="cta-form__inwrapper">
+                <input
+                  type="text"
+                  placeholder="30 лет"
+                  class="cta-form__input"
+                  id="ct2"
+                />
+              </div>
             </div>
           </div>
 
-          <button class="btn-reset btn btn--blue cta-form__btn">
+          <div class="btn-reset btn btn--blue cta-form__btn modal-btn-blue">
             Получить одобрение онлайн
-          </button>
+          </div>
         </form>
       </div>
       <div class="cta__right">
@@ -978,6 +1084,92 @@
     </div>
   </div>
 </footer>
+<div class="navigation">
+  <ul class="list-reset navigation__list">
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/01.svg" alt="" />
+        </span>
+        О проекте
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/02.svg" alt="" />
+        </span>
+        Галерея
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/03.svg" alt="" />
+        </span>
+        Новости
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/04.svg" alt="" />
+        </span>
+        Контакты
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link burger-btn" data-burger>
+        <span>
+          <img src="./img/menu/05.svg" alt="" />
+        </span>
+        Меню
+      </a>
+    </li>
+  </ul>
+</div>
+ <div class="burger-menu" data-menu data-menu-overlay>
+  <div class="burger-menu__body" data-menu-body>
+    <nav class="nav burger-menu__nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">О проекте</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Ход строительства</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">О застройщике</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="burger-menu__call">
+      <a href="tel:+7 423 287 77 27" class="burger-menu__tel">
+        +7 423 287 77 27
+      </a>
+      <button class="btn-reset burger-menu__capture">Заказать звонок</button>
+    </div>
+  </div>
+
+  <button class="burger-menu__close btn-reset">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.92893 1.92898L16.0711 16.0711M16.0711 1.92898L1.92893 16.0711"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+
 <script>
   ymaps.ready(function () {
     const ourCompany = [43.162565, 131.94896];

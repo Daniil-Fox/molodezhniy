@@ -4,46 +4,51 @@
       <div class="cta__content">
         <h3 class="title3 cta__title">Посчитайте вашу выгоду</h3>
         <form action="#" class="cta__form cta-form">
-          <div class="cta-form__wrapper">
-            <label for="ct1" class="cta-form__label">Стоимость квартиры</label>
-            <div class="cta-form__inwrapper">
-              <input
-                type="number"
-                min="6500000"
-                placeholder="от 6 500 000 ₽"
-                class="cta-form__input"
-                id="ct1"
-              />
+          @include('./modal-blue.html')
+          <div class="cta-form__parent">
+            <div class="cta-form__wrapper">
+              <label for="ct1" class="cta-form__label"
+                >Стоимость квартиры</label
+              >
+              <div class="cta-form__inwrapper">
+                <input
+                  type="number"
+                  min="6500000"
+                  placeholder="от 6 500 000 ₽"
+                  class="cta-form__input"
+                  id="ct1"
+                />
+              </div>
             </div>
-          </div>
-          <div class="cta-form__wrapper">
-            <label for="ct2" class="cta-form__label"
-              >Первоначальный взнос</label
-            >
-            <div class="cta-form__inwrapper" data-after="0%">
-              <input
-                type="text"
-                placeholder="2 235 240 ₽"
-                class="cta-form__input"
-                id="ct2"
-              />
+            <div class="cta-form__wrapper">
+              <label for="ct2" class="cta-form__label"
+                >Первоначальный взнос</label
+              >
+              <div class="cta-form__inwrapper" data-after="0%">
+                <input
+                  type="text"
+                  placeholder="2 235 240 ₽"
+                  class="cta-form__input"
+                  id="ct2"
+                />
+              </div>
             </div>
-          </div>
-          <div class="cta-form__wrapper">
-            <label for="ct2" class="cta-form__label">Срок кредита</label>
-            <div class="cta-form__inwrapper">
-              <input
-                type="text"
-                placeholder="30 лет"
-                class="cta-form__input"
-                id="ct2"
-              />
+            <div class="cta-form__wrapper">
+              <label for="ct2" class="cta-form__label">Срок кредита</label>
+              <div class="cta-form__inwrapper">
+                <input
+                  type="text"
+                  placeholder="30 лет"
+                  class="cta-form__input"
+                  id="ct2"
+                />
+              </div>
             </div>
           </div>
 
-          <button class="btn-reset btn btn--blue cta-form__btn">
+          <div class="btn-reset btn btn--blue cta-form__btn modal-btn-blue">
             Получить одобрение онлайн
-          </button>
+          </div>
         </form>
       </div>
       <div class="cta__right">
