@@ -20,6 +20,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      left: unset;
+      right: -44.5rem;
+      top: -30.8rem;
+      transform: rotateZ(90deg);
+    }
   }
   &::after {
     content: "";
@@ -34,6 +43,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      width: 76rem;
+      height: 76rem;
+      right: unset;
+      left: -47.5rem;
+      top: unset;
+      bottom: -47rem;
+      transform: rotateZ(101deg) rotateX(180deg);
+    }
   }
   &__container {
     display: grid;

@@ -92,6 +92,10 @@ button:disabled {
   font-size: 8rem;
   line-height: 100%;
   color: var(--black);
+
+  @include mobile {
+    font-size: 4.6rem;
+  }
 }
 
 .subtitle1 {
@@ -138,6 +142,10 @@ button:disabled {
   font-size: 1.8rem;
   line-height: 120%;
   color: var(--black);
+
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 #suggestions {
   border: 1px solid #ccc;

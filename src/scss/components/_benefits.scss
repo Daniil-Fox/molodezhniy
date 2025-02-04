@@ -2,7 +2,11 @@
   padding: 7rem 0;
   margin-bottom: 5rem;
   position: relative;
-
+  @include mobile {
+    margin: 0;
+    padding: 3rem 0;
+    padding-top: 2rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -16,6 +20,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -30,9 +38,23 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      background-image: url("./../img/lines/main3.svg");
+      transform: rotateY(180deg) rotateZ(-150deg);
+      bottom: unset;
+      right: -1.3rem;
+      top: -37.4rem;
+    }
   }
   &__title {
     margin-bottom: 5rem;
+
+    @include mobile {
+      margin-bottom: 1.9rem;
+    }
   }
   &__bottom {
     text-align: center;
@@ -43,12 +65,22 @@
     width: 32.8rem;
     border-radius: 1.5rem;
     font-size: 2rem;
+
+    @include mobile {
+      width: 100%;
+    }
   }
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     margin-bottom: 6rem;
+
+    @include mobile {
+      display: flex;
+      gap: 0;
+      margin-bottom: 3.9rem;
+    }
   }
 }
 
@@ -61,6 +93,16 @@
   overflow: hidden;
 
   position: relative;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0;
+    mask-image: url("./../img/benefits/mask-mob.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    background-position: center;
+    height: 58rem;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -71,6 +113,14 @@
     width: 100%;
     max-width: 49rem;
     flex-shrink: 0;
+
+    @include mobile {
+      max-width: 100%;
+      padding: 4.2rem;
+      padding-top: 4.2rem;
+      padding-right: 4rem;
+      padding-bottom: 3.7rem;
+    }
   }
   &__title {
     margin: 0;
@@ -79,9 +129,18 @@
     font-size: 3.2rem;
     line-height: 120%;
     color: var(--black);
+
+    @include mobile {
+      font-size: 3rem;
+      margin-bottom: 0.7rem;
+    }
   }
   &__desc {
     line-height: 123.5%;
+
+    @include mobile {
+      line-height: 120%;
+    }
   }
   &__link {
     margin-top: auto;
@@ -89,6 +148,10 @@
     font-size: 1.6rem;
     line-height: 120%;
     color: var(--black);
+
+    @include mobile {
+      display: none;
+    }
   }
   &__img {
     position: absolute;
@@ -102,6 +165,13 @@
     mask-size: auto 100%;
     mask-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      mask: none;
+      height: 33.7rem;
+      position: relative;
+      width: 100%;
+    }
     img {
       position: absolute;
       left: 0;

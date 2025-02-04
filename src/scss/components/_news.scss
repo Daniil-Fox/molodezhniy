@@ -1,26 +1,76 @@
 .news-section {
   padding: 6.7rem 0;
+
   &:not(:last-child) {
     margin-bottom: 6.3rem;
   }
+
+  @include mobile {
+    padding: 5.5rem 0.2rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -62.4rem;
+      top: -7.5rem;
+      width: 75rem;
+      height: 75rem;
+      transform: rotateZ(-59deg);
+      background-image: url("./../img/lines/main1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+
+      right: -75rem;
+      bottom: 17rem;
+      width: 75rem;
+      height: 75rem;
+      transform: rotateY(180deg) rotateZ(60deg);
+      background-image: url("./../img/lines/main1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
   &__title {
     margin-bottom: 5rem;
+
+    @include mobile {
+      margin-bottom: 3.1rem;
+    }
   }
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
     margin-bottom: 5.5rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
   }
   &__bottom {
     text-align: center;
   }
+
   &__link {
     padding-top: 1.3rem;
     padding-bottom: 1.9rem;
     font-size: 2rem;
     border-radius: 1.5rem;
     width: 32.8rem;
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -31,6 +81,11 @@
     border-radius: 3rem;
     overflow: hidden;
     margin-bottom: 2.15rem;
+
+    @include mobile {
+      height: 36rem;
+      margin-bottom: 1.2rem;
+    }
     img {
       width: 100%;
       height: 100%;

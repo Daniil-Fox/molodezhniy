@@ -1,13 +1,23 @@
 .cta {
   padding: 7rem 0;
+
+  @include mobile {
+    padding: 6.6rem 0;
+    padding-bottom: 2rem;
+  }
   &:not(:last-child) {
     margin-bottom: 4.7rem;
   }
   &__container {
     display: flex;
-    grid-template-columns: repeat(10, 1fr);
     gap: 4rem;
     padding: 0 14.5rem;
+
+    @include mobile {
+      padding: 0;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
   }
 
   &__content {
@@ -30,6 +40,13 @@
     justify-content: space-between;
 
     position: relative;
+
+    @include mobile {
+      height: 51.2rem;
+      justify-content: flex-start;
+      gap: 1.1rem;
+      padding-left: 5.2rem;
+    }
   }
   &__img {
     position: absolute;
@@ -42,6 +59,12 @@
     mask-size: auto 100%;
     mask-repeat: no-repeat;
     mask-position: center;
+
+    @include mobile {
+      mask-image: url("./../img/cta-mask-mob.svg");
+      width: 100%;
+      height: 100%;
+    }
 
     img {
       width: 100%;
@@ -58,20 +81,32 @@
     font-size: 5rem;
     font-weight: 600;
     line-height: 1;
+
     span {
       color: var(--blue);
     }
   }
   &__title {
     margin-bottom: 3rem;
+
+    @include mobile {
+      text-align: center;
+      line-height: 0.92;
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
 .cta-b {
   padding: 7rem 16.4rem;
+  padding-left: 16.6rem;
   margin-bottom: 13rem;
   position: relative;
-
+  @include mobile {
+    padding: 4rem 0;
+    padding-top: 5.2rem;
+    margin-bottom: 5.7rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -86,6 +121,13 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      left: -43rem;
+      top: -8rem;
+    }
   }
   &__container {
     background-color: #fff;
@@ -94,16 +136,35 @@
     padding-bottom: 7.6rem;
     border-radius: 3rem;
     position: relative;
+
+    @include mobile {
+      padding: 4rem;
+      padding-top: 42.6rem;
+    }
   }
   &__title {
     margin-bottom: 1.4rem;
+
+    @include mobile {
+      margin-bottom: 0.8rem;
+    }
   }
   &__desc {
     font-weight: 500;
     margin-bottom: 5rem;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
   }
   &__content {
     max-width: 55%;
+
+    @include mobile {
+      max-width: 100%;
+      text-align: center;
+    }
   }
   &__form {
     max-width: 51.2rem;
@@ -113,9 +174,16 @@
       height: 5.7rem;
       &:not(:last-child) {
         margin-bottom: 2rem;
+        @include mobile {
+          margin-bottom: 1.1rem;
+        }
       }
       &:last-of-type {
         margin-bottom: 5.7rem;
+
+        @include mobile {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
@@ -127,19 +195,29 @@
     bottom: -0.5rem;
     width: 71.3rem;
     aspect-ratio: 1 / 1;
-
+    @include mobile {
+      width: 44.5rem;
+      bottom: unset;
+      top: -9rem;
+      right: 2rem;
+    }
     &::before {
       content: "";
       position: absolute;
       z-index: -1;
       background-color: var(--cyan);
-      width: 94.6%;
+      width: 99%;
       aspect-ratio: 1 / 1;
-      bottom: -4.6rem;
-      left: -5.9rem;
+      bottom: -6.2rem;
+      left: -6rem;
 
       mask-image: url("./../img/cta-b-mask.svg");
-      mask-size: auto 100%;
+      mask-size: 100% 100%;
+
+      @include mobile {
+        bottom: -3.3rem;
+        left: -3.5rem;
+      }
     }
     img {
       width: 100%;
@@ -149,12 +227,22 @@
 }
 
 .cta-form {
+  @include mobile {
+    padding: 0 0.2rem;
+  }
   &__wrapper {
     &:not(:last-child) {
       margin-bottom: 2.7rem;
+      @include mobile {
+        margin-bottom: 1.7rem;
+      }
     }
     &:last-of-type {
       margin-bottom: 7.7rem;
+
+      @include mobile {
+        margin-bottom: 3rem;
+      }
     }
   }
   &__inwrapper {
@@ -209,10 +297,14 @@
   &__agree {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 120%;
     color: var(--black);
-
+    @include mobile {
+      display: block;
+      max-width: 32.5rem;
+      margin: 0 auto;
+    }
     a {
       color: inherit;
       text-decoration: underline;

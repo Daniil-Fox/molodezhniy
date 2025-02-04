@@ -3,7 +3,10 @@
   padding: 7rem 0;
   padding-top: 11.3rem;
   position: relative;
-
+  @include mobile {
+    margin: 0;
+    padding: 1.8rem 0;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -18,6 +21,10 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-90deg);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &::after {
@@ -34,16 +41,38 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(-180deg);
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      right: -49.3rem;
+      bottom: 10rem;
+      transform: rotateX(180deg) rotateZ(111deg);
+    }
   }
   &__title {
     margin-bottom: 4.4rem;
-  }
 
+    @include mobile {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__slider {
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+  }
   &__items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem 0;
+
+    @include mobile {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 0;
+    }
 
     .swiper-slide {
       width: auto;
@@ -61,11 +90,37 @@
     min-width: 22rem;
     max-width: 43rem;
     width: 100%;
+
+    @include mobile {
+      min-width: unset;
+      max-width: unset;
+      width: 100%;
+      padding: 4rem 4.3rem;
+      padding-top: 4.3rem;
+    }
+    &--mob {
+      display: none;
+      background-color: #fff;
+      mask-image: url("./../img/partners/mob-mask.svg") !important;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 100% 100%;
+      @include mobile {
+        display: flex;
+        padding-top: 3.9rem;
+        padding-bottom: 5rem;
+        gap: 0.1rem;
+      }
+    }
     img {
       max-height: 4.5rem;
       height: 100%;
       width: auto;
       object-fit: contain;
+
+      @include mobile {
+        max-height: 4.4rem;
+      }
     }
     span {
       font-weight: 500;
@@ -80,6 +135,10 @@
       line-height: 120%;
       text-align: center;
       color: var(--black);
+
+      @include mobile {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -95,15 +154,25 @@
 
     &:last-child {
       padding: 3.5rem 2rem;
+
+      @include mobile {
+        display: none;
+      }
     }
     @for $i from 1 to 40 {
       &:nth-child(#{$i}) {
         mask-image: url("./../img/partners/mask#{$i}.svg");
+        @include mobile {
+          mask: none;
+        }
       }
     }
     @for $i from 1 to 7 {
       &:nth-child(#{$i}) {
         height: 12rem;
+        @include mobile {
+          height: unset;
+        }
       }
     }
 
@@ -164,6 +233,13 @@
     }
     &:nth-child(16) {
       width: 45rem;
+    }
+
+    @include mobile {
+      width: auto !important;
+      height: 15.2rem !important;
+      border-radius: 3rem;
+      overflow: hidden;
     }
   }
 }
