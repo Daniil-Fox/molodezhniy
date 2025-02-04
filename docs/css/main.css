@@ -678,6 +678,13 @@ button:disabled {
   font-size: 2rem;
   line-height: 120%;
   color: var(--black);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+@media (any-hover: hover) {
+  .nav__link:hover {
+    color: var(--pink);
+  }
 }
 
 .hero {
