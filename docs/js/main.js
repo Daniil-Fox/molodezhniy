@@ -11,6 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+
 
 
 
@@ -146,6 +148,37 @@ window.addEventListener("DOMContentLoaded", () => {
     slidesPerView: "auto"
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/components/tabs.js ***!
+  \***********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const tabs = document.querySelectorAll("[data-tab]");
+if (tabs.length > 0) {
+  const tabsContent = document.querySelectorAll("[data-tab-content]");
+  function clearActive() {
+    tabs.forEach(el => {
+      el.classList.remove("active");
+    });
+    tabsContent.forEach(el => {
+      el.classList.remove("active");
+    });
+  }
+  tabs.forEach(t => {
+    t.addEventListener("click", e => {
+      const dataset = t.dataset.tab;
+      e.preventDefault();
+      clearActive();
+      t.classList.add("active");
+      document.querySelector(`[data-tab-content=${dataset}]`).classList.add("active");
+    });
+  });
+}
 
 /***/ }),
 

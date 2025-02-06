@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Молодежный</title>
+
+  <link
+    rel="preload"
+    href="fonts/Commissioner-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Commissioner-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/GolosText-DemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/GolosText-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/GolosText-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Inter-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+  <script
+    src="https://api-maps.yandex.ru/2.1/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"
+    type="text/javascript"
+  ></script>
+</head>
+
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <div class="header__left">
+        <a href="./" class="header__logo">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+        <nav class="header__nav nav">
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">О проекте</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Галерея</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Ход строительства</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О застройщике</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <svg
+                  width="20"
+                  height="6"
+                  viewBox="0 0 20 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_f_2026_2290)">
+                    <circle cx="3.28571" cy="3" r="2" fill="black" />
+                    <circle cx="10.2857" cy="3" r="2" fill="black" />
+                    <circle cx="17.2857" cy="3" r="2" fill="black" />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_2026_2290"
+                      x="0.785706"
+                      y="0.5"
+                      width="19"
+                      height="5"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="0.25"
+                        result="effect1_foregroundBlur_2026_2290"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <button class="btn btn-reset header__btn">Выбрать квартиру</button>
+
+        <div class="header__col">
+          <a href="tel:+7 423 287 77 27" class="header__tel">
+            +7 423 287 77 27
+          </a>
+          <button class="btn-reset header__recall modal-btn">
+            Заказать звонок
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="modal modal--recall">
+  <div class="modal__body">
+    <div class="modal__header">
+      <div class="modal__title">Заказать звонок</div>
+      <button class="btn-reset modal__close">
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 44 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L42 42M42 2L2 42"
+            stroke="black"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="cta-form modal__form">
+      <div class="modal__row">
+        <input
+          type="text"
+          name="Имя"
+          placeholder="Укажите ваше имя"
+          class="cta-form__input"
+        />
+        <input
+          type="tel"
+          name="Телефон"
+          placeholder="Ваш контактный телефон"
+          class="cta-form__input"
+        />
+      </div>
+      <div class="modal__row">
+        <button class="btn btn-reset btn--pink modal__btn cta-form__btn">
+          Оставить заявку
+        </button>
+        <small class="cta-form__agree">
+          Нажимая кнопку «Отправить заявку», вы соглашаетесь с&nbsp;<a href="#"
+            >политикой обработки персональных данных</a
+          >
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+      <main class="main">
+        <section class="about-hero">
+  <div class="container">
+    <div class="about-hero__header">
+      <h1 class="about-hero__title title2">О проекте</h1>
+    </div>
+
+    <div class="about-hero__items">
+      <div class="about-hero__item ah-item">
+        <div class="ah-item__content">
+          <div class="ah-item__header">
+            <p class="ah-item__title"><span>24 </span>этажа</p>
+            <p class="ah-item__desc">Высота здания</p>
+          </div>
+        </div>
+        <div class="ah-item__img">
+          <img src="./img/about-hero/building.webp" alt="" />
+        </div>
+      </div>
+      <div class="about-hero__item ah-item">
+        <div class="ah-item__content">
+          <div class="ah-item__header">
+            <p class="ah-item__title"><span>223 </span>машиноместа</p>
+            <p class="ah-item__desc">В крытой подземной парковке</p>
+          </div>
+        </div>
+        <div class="ah-item__img">
+          <img src="./img/about-hero/car.webp" alt="" />
+        </div>
+      </div>
+      <div class="about-hero__item ah-item">
+        <div class="ah-item__content">
+          <div class="ah-item__header">
+            <p class="ah-item__title"><span>416 </span>квартир в доме</p>
+          </div>
+          <div class="ah-item__content">
+            <div class="ah-item__desc">
+              <p>Общей площадью 18320,2 м²</p>
+              <p>1-комнатных – 244, Студии – 32 (от 24,7 до 39,30 м²)</p>
+              <p>
+                2-комнатных – 130, в т.ч. 2-уровневые – 4 (от 44,10 до 62,50 м²)
+              </p>
+              <p>3-комнатных – 42 (70,40 до 72,60 м²)</p>
+              <p>Пентхаус - 8 (высота потолков 5,85 м)</p>
+            </div>
+          </div>
+        </div>
+        <div class="ah-item__img">
+          <img src="./img/about-hero/flat.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="about-benefits">
+  <div class="container">
+    <h2 class="title3 about-benefits__title centered">Преимущества</h2>
+    <p class="about-benefits__subtitle centered title5">
+      Дом, продуманный до мелочей, в котором вы будете чувствовать себя
+      комфортно и безопасно
+    </p>
+
+    <div class="about-benefits__tabs">
+      <button class="about-benefits__tab btn-reset active" data-tab="infr">
+        Инфраструктура
+      </button>
+      <button class="about-benefits__tab btn-reset" data-tab="parking">
+        Крытый паркинг
+      </button>
+      <button class="about-benefits__tab btn-reset" data-tab="free">
+        Свободная планировка
+      </button>
+      <button class="about-benefits__tab btn-reset" data-tab="arch">
+        Архитектура
+      </button>
+      <button class="about-benefits__tab btn-reset" data-tab="insur">
+        Бесплатное страхование имущества
+      </button>
+      <button class="about-benefits__tab btn-reset" data-tab="safe">
+        Безопасность
+      </button>
+    </div>
+
+    <div class="about-benefits__wrapper">
+      <article
+        class="about-benefits__content ben-content active"
+        data-tab-content="infr"
+      >
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Инфраструктура</h4>
+          <div class="desc2 ben-content__desc">
+            <p>
+              ЖК&nbsp;&laquo;Молодёжный&raquo;&nbsp;&mdash; это современный,
+              идеально приспособленный для&nbsp;городской среды жилой комплекс.
+              Прекрасное место, чтобы растить детей, принимать гостей
+              и&nbsp;наслаждаться жизнью.
+            </p>
+            <p>
+              Просторная придомовая территория с детскими и спортивными
+              площадками станет для вашей семьи долгожданным островком комфорта
+              и&nbsp;безопасности. В&nbsp;непосредственной близости
+              к&nbsp;жилому комплексу находятся транспортные развязки в
+              направлениях Второй речки, Баляева, о. Русского, Седанки.
+            </p>
+            <p>
+              Это позволит легко добраться до дома на личном или общественном
+              транспорте. Прямо напротив ЖК – остановка автобуса № 95
+              «Гвардейская». В&nbsp;шаговой доступности расположены
+              общеобразовательная средняя школа МБОУ СОШ № 82, детский сад №9
+              «Катерок», городская поликлиника №9, центр развития ребенка
+              «Бэби-клуб», магазин «Счастливое детство», аптеки.
+            </p>
+            <p>
+              К&nbsp;дому будет пристроен двухэтажный супермаркет
+              с&nbsp;подземным паркингом. Подъехать к комплексу можно будет с
+              двух сторон — с&nbsp;улиц Адмирала Горшкова и Анны Щетининой.
+            </p>
+          </div>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/01.webp" alt="" />
+        </div>
+      </article>
+      <article class="benefits__content ben-content" data-tab-content="parking">
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Крытый паркинг</h4>
+          <div class="desc2 ben-content__desc">
+            <p>
+              Двухэтажный паркинг жилого комплекса &laquo;Молодёжный&raquo;
+              расположен внутри дома с&nbsp;доступом к&nbsp;лифтам&nbsp;&mdash;
+              чтобы попасть в&nbsp;автомобиль, не&nbsp;придётся покидать стен
+              жилого комплекса.
+            </p>
+            <p>
+              Паркинг рассчитан на&nbsp;223&nbsp;машиноместа. И&nbsp;разработан
+              так, чтобы его&nbsp;использование вызывало лишь положительные
+              эмоции: просторные машиноместа, высокие потолки и&nbsp;широкие
+              проезды, где свободно могут разъехаться несколько автомобилей.
+            </p>
+          </div>
+          <a href="#" class="ben-content__btn btn-reset btn btn--orange-stroke">
+            Выбрать машиноместо
+          </a>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/02.webp" alt="" />
+        </div>
+      </article>
+      <article class="benefits__content ben-content" data-tab-content="free">
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Свободная планировка</h4>
+          <div class="desc2 ben-content__desc">
+            <p>
+              Свободная планировка позволяет владельцу квартиры самостоятельно
+              решить сколько комнат ему потребуется на&nbsp;купленной площади.
+            </p>
+            <p>
+              Таким образом, человек планирует и&nbsp;делает квартиру под свои
+              интересы, учитывая потребности своей семьи, количества детей.
+              Такое преимущество позволяет жить в&nbsp;комфорте. Благодаря
+              свободной планировке интерьер вашего помещения станет неповторимым
+              и&nbsp;будет заметно отличаться оригинальностью, ведь второй такой
+              квартиры в этом доме не&nbsp;будет.
+            </p>
+            <p>
+              Благодаря свободной планировке у&nbsp;вас есть возможность
+              внедрить самые смелые решения. Вы&nbsp;также можете пригласить
+              профессионала, и он&nbsp;поможет вам распределить количество
+              комнат и&nbsp;их&nbsp;обустройство. Покупая квартиру
+              со&nbsp;свободной планировкой, вы&nbsp;создаете жилье своей мечты.
+            </p>
+          </div>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/03.webp" alt="" />
+        </div>
+      </article>
+      <article class="benefits__content ben-content" data-tab-content="arch">
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Архитектура</h4>
+          <div class="desc2 ben-content__desc">
+            <h5>Фасад</h5>
+            <p>
+              Монолитные железобетонные стены уберегут дом от&nbsp;ветра, влаги
+              и&nbsp;других капризов приморского климата. Для теплозащиты будут
+              применены негорючие минераловатные плиты толщиной
+              15&nbsp;сантиметров.
+            </p>
+            <p>
+              Фасад состоит из&nbsp;навесной вентилируемой подсистемы
+              со&nbsp;сроком эксплуатации в&nbsp;агрессивной наружной среде
+              не&nbsp;менее 50&nbsp;лет. Наружный слой вентилируемого фасада
+              выполнен из&nbsp;современных отделочных материалов с&nbsp;высокими
+              эксплуатационными свойствами.
+            </p>
+
+            <h5>Отопление, водоснабжение</h5>
+            <p>
+              Централизованное отопление, горячее и&nbsp;холодное
+              водоснабжение&nbsp;&mdash; от&nbsp;существующих городских сетей.
+            </p>
+
+            <h5>Остекление</h5>
+            <p>
+              Для остекления жилого комплекса выбраны современные оконные
+              пластиковые конструкции с&nbsp;сопротивлением
+              теплопередачи&nbsp;&mdash; не&nbsp;менее 0,62&nbsp;СВт
+              /кв.&nbsp;м&nbsp;с&nbsp;которой не&nbsp;страшна любая непогода.
+              Некоторые квартиры имеют витражное панорамное остекление,
+              а&nbsp;вместе с&nbsp;ним &mdash; максимальное количество света
+              и&nbsp;отличный вид на&nbsp;город.
+            </p>
+
+            <h5>Лифты</h5>
+            <p>
+              В&nbsp;доме 24&nbsp;этажа, поэтому лифтовой системе уделено особое
+              внимание. Запланирована установка восьми лифтов, два
+              из&nbsp;которых&nbsp;&mdash; грузовые.
+            </p>
+            <p>
+              Все они оснащены электронной системой управления, вентиляцией и
+              надёжной системой торможения кабины до&nbsp;её&nbsp;полной
+              остановки в экстренных случаях. Скорость подъёма
+              лифта&nbsp;&mdash; 2,5&nbsp;м/с.
+            </p>
+          </div>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/04.webp" alt="" />
+        </div>
+      </article>
+      <article class="benefits__content ben-content" data-tab-content="insur">
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Бесплатное страхование имущества</h4>
+          <div class="desc2 ben-content__desc">
+            <p>
+              Всех участников долевого строительства за&nbsp;счёт застройщика
+            </p>
+            <p>
+              Страховой дом ВСК заключает
+              с&nbsp;СЗ&nbsp;&laquo;Молодёжный&raquo; коллективный договор
+              страхования, действующий в&nbsp;течение 12-и месяцев после
+              подписания акта приёма-передачи квартир.
+            </p>
+            <p>
+              Объектом страхования является собственность покупателей жилья
+              в&nbsp;комплексе&nbsp;&mdash; внутренняя отделка, инженерное
+              оборудование, домашнее имущество,&nbsp;&mdash; а&nbsp;также риски
+              в&nbsp;случаях пожара, взрыва, удара молнии, залива или
+              противоправных действий третьих лиц. Кроме того, есть возможность
+              предусмотреть ситуацию, когда действия самого участника долевого
+              строительства становятся причиной страхового случая: для этого
+              осуществляется страхование гражданской ответственности
+              за&nbsp;причинение вреда третьим лицам.
+            </p>
+          </div>
+
+          <div class="ben-content__files">
+            <a href="#" download>
+              <img src="./img/about-benefits/sert.webp" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/05.webp" alt="" />
+        </div>
+      </article>
+      <article class="benefits__content ben-content" data-tab-content="safe">
+        <div class="ben-content__text">
+          <h4 class="ben-content__title">Безопасность</h4>
+          <div class="desc2 ben-content__desc">
+            <p>
+              В&nbsp;жилом комплексе &laquo;Молодежный&raquo; продуманная
+              система противопожарной защиты, которая включает:<br />
+              &mdash;&nbsp;современную систему оповещения, пожаротушения
+              и&nbsp;дымоудаления; <br />
+              &mdash; круглосуточную охрану и&nbsp;видеонаблюдение , которые
+              гарантируют оперативное обнаружение возгорания в&nbsp;любое время
+              суток; <br />
+              &mdash; использование высококачественных материалов
+              и&nbsp;электроники;
+              <br />
+              &mdash; смонтированные системы пожаротушения, которые при
+              срабатывании наносят меньший ущерб имуществу.
+            </p>
+            <p>
+              Обеспечивает высокий уровень безопасности жильцов и&nbsp;сам
+              архитектурный проект. При возведении используются самые безопасные
+              материалы по&nbsp;огнестойкости, токсичности
+              и&nbsp;дымообразованию: корпус&nbsp;&mdash; из&nbsp;железобетона,
+              утеплитель&nbsp;&mdash; негорючая минеральная вата.
+            </p>
+            <p>
+              Каждая квартира в&nbsp;комплексе оборудована датчиками дыма
+              и&nbsp;системой звукового оповещения . На&nbsp;каждом этаже
+              проектом предусмотрена противопожарная система: установлены
+              пожарные краны, кратчайшие пути эвакуации с&nbsp;системой
+              дымоудаления и&nbsp;звукового оповещения, с&nbsp;противопожарными
+              дверями, способными удерживать пламя
+              и&nbsp;дым&nbsp;в&nbsp;течение 90&nbsp;минут.
+            </p>
+          </div>
+        </div>
+        <div class="ben-content__img">
+          <img src="./img/about-benefits/06.webp" alt="" />
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+        <section class="place place--sec">
+  <div class="container">
+    <h2 class="title3 centered place__title">Расположение</h2>
+    <p class="place__subtitle subtitle1 centered">
+      <span>Снеговая Падь</span> — молодой активно развивающийся район
+    </p>
+
+    <div class="place__map" id="map">
+      <div class="place__content place-content">
+        <div class="place-content__img">
+          <img src="./img/place/01.webp" alt="" />
+        </div>
+        <div class="place-content__content">
+          <p class="place-content__address">ул. Адмирала Горшкова, 8</p>
+          <a href="tel:+7 423 287 77 27" class="place-content__tel">
+            +7 423 287 77 27
+          </a>
+
+          <form class="place-content__form place-form">
+            <input
+              type="text"
+              placeholder="Введите ваш адрес"
+              class="place-form__input"
+              id="address"
+              autocomplete="off"
+            />
+            <div id="suggestions"></div>
+            <button class="btn-reset btn btn--orange place-form__btn" disabled>
+              Проложить маршрут
+            </button>
+          </form>
+          <div class="place-content__buttons">
+            <button class="btn-reset place-content__btn btn btn--dark">
+              Яндекс Карты
+            </button>
+            <button class="btn-reset place-content__btn btn btn--dark">
+              Google Maps
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  ymaps.ready(function () {
+    const ourCompany = [43.162565, 131.94896];
+    let suggestionsDiv = document.getElementById("suggestions");
+    let activeIndex = -1;
+    let markers = [];
+    let multiRoute;
+    var myMap = new ymaps.Map(
+        "map",
+        {
+          center: ourCompany,
+          zoom: 14,
+        },
+        {
+          searchControlProvider: "yandex#search",
+        }
+      ),
+      myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(),
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/placemark.svg",
+          iconImageSize: [30, 30],
+          iconImageOffset: [0, -34],
+        }
+      );
+
+    myMap.geoObjects.add(myPlacemark);
+    myMap.controls.remove("geolocationControl"); // удаляем геолокацию
+    myMap.controls.remove("searchControl"); // удаляем поиск
+    myMap.controls.remove("trafficControl"); // удаляем контроль трафика
+    myMap.controls.remove("typeSelector"); // удаляем тип
+    myMap.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+    myMap.controls.remove("zoomControl"); // удаляем контрол зуммирования
+    myMap.controls.remove("rulerControl"); // удаляем контрол правил
+    // myMap.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+    const placeForm = document.querySelector(".place-form");
+
+    if (placeForm) {
+      const input = placeForm.querySelector(".place-form__input");
+      const btn = placeForm.querySelector(".place-form__btn");
+      const ourAddressPlacemark = [];
+      function checkDisabled() {
+        if (input.value !== "") {
+          btn.removeAttribute("disabled");
+        } else {
+          btn.setAttribute("disabled", "");
+        }
+      }
+      input.addEventListener("input", () => {
+        checkDisabled();
+        let query = input.value;
+
+        if (query.length < 3) {
+          suggestionsDiv.style.display = "none";
+          return;
+        }
+        query = "Владивосток, " + query;
+        fetch(
+          "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Token 4d19c67436fb1dd506158003fd2c419d4f6155a0", // Замените на ваш токен
+            },
+            body: JSON.stringify({ query }),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            suggestionsDiv.innerHTML = "";
+            if (data.suggestions.length) {
+              suggestionsDiv.style.display = "block";
+              data.suggestions.forEach((suggestion, index) => {
+                const item = document.createElement("div");
+                item.dataset.suggestion = JSON.stringify(suggestion);
+                // Вывод короткого адреса
+                const shortAddress = suggestion.value;
+
+                item.textContent = shortAddress; // Отображаем адрес
+                item.classList.add("suggestion-item");
+
+                // Клик по подсказке
+                item.addEventListener("click", function () {
+                  selectSuggestion(suggestion);
+                });
+                item.dataset.index = index;
+                suggestionsDiv.appendChild(item);
+              });
+            } else {
+              suggestionsDiv.style.display = "none";
+            }
+          })
+          .catch((error) => console.error("Ошибка:", error));
+      });
+
+      input.addEventListener("keydown", function (event) {
+        const items = suggestionsDiv.getElementsByClassName("suggestion-item");
+
+        if (event.key === "ArrowDown") {
+          activeIndex = (activeIndex + 1) % items.length; // Переход к следующему элементу
+          updateActiveItem(items);
+        } else if (event.key === "ArrowUp") {
+          activeIndex = (activeIndex - 1 + items.length) % items.length; // Переход к предыдущему элементу
+          updateActiveItem(items);
+        } else if (event.key === "Enter" && activeIndex > -1) {
+          event.preventDefault();
+          selectSuggestion(JSON.parse(items[activeIndex].dataset.suggestion)); // Используем JSON для хранения объекта
+        }
+      });
+
+      function addMarker(coords, name) {
+        const placemark = new ymaps.Placemark(coords, { balloonContent: name });
+        myMap.geoObjects.add(placemark);
+        markers.push(placemark); // Сохраняем метку в массив
+      }
+
+      function addRoute(startCoords, endCoords) {
+        multiRoute = new ymaps.multiRouter.MultiRoute({
+          referencePoints: [startCoords, endCoords],
+        });
+
+        myMap.geoObjects.add(multiRoute);
+      }
+
+      function selectSuggestion(suggestion) {
+        input.value = suggestion.value;
+        suggestionsDiv.style.display = "none";
+
+        const coordinates = {
+          lat: suggestion.data.geo_lat, // Широта
+          lon: suggestion.data.geo_lon, // Долгота
+        };
+        ourAddressPlacemark[0] = coordinates;
+      }
+
+      function clearMap(exceptMarker) {
+        // Удаление всех меток
+        markers.forEach((marker) => {
+          if (marker !== exceptMarker) {
+            myMap.geoObjects.remove(marker);
+          }
+        });
+
+        // Очистка маршрутов
+        if (multiRoute) {
+          myMap.geoObjects.remove(multiRoute);
+        }
+      }
+
+      function updateActiveItem(items) {
+        [...items].forEach((item) => {
+          item.classList.remove("active"); // Убираем класс активности у всех элементов
+        });
+        if (items[activeIndex]) {
+          items[activeIndex].classList.add("active"); // Добавляем класс к активному элементу
+        }
+      }
+      document.addEventListener("click", function (event) {
+        if (!suggestionsDiv.contains(event.target)) {
+          suggestionsDiv.style.display = "none";
+        }
+      });
+      input.addEventListener("focus", checkDisabled);
+      input.addEventListener("focusout", checkDisabled);
+      input.addEventListener("change", checkDisabled);
+
+      placeForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let serachingAddress = input.value;
+        if (input.value.indexOf("Владивосток") == -1)
+          serachingAddress = "Владивосток," + input.value;
+        fetch(
+          `https://nominatim.openstreetmap.org/search?q=${serachingAddress}&format=json`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.length > 1 && !ourAddressPlacemark[0]) {
+              const { lat, lon } = data[0];
+              ourAddressPlacemark[0] = { lat, lon };
+            }
+
+            clearMap(null);
+            addMarker(
+              [ourAddressPlacemark[0].lat, ourAddressPlacemark[0].lon],
+              ""
+            );
+
+            addRoute(ourCompany, [
+              ourAddressPlacemark[0].lat,
+              ourAddressPlacemark[0].lon,
+            ]);
+          });
+      });
+    }
+  });
+</script>
+ <section class="cta-b">
+  <div class="container">
+    <div class="cta-b__container">
+      <div class="cta-b__content">
+        <h2 class="titleL cta-b__title">Есть вопросы?</h2>
+        <p class="desc1 cta-b__desc">
+          Оставте заявку, и мы свяжемся с&nbsp;вами
+        </p>
+
+        <form action="#" class="cta-form cta-b__form">
+          <input
+            type="text"
+            placeholder="Укажите ваше имя"
+            class="cta-form__input"
+            name="Имя"
+          />
+          <input
+            type="text"
+            placeholder="Ваш контактный телефон"
+            class="cta-form__input"
+            name="Телефон"
+          />
+
+          <button class="cta-form__btn btn btn-reset btn--aqua">
+            Оставить заявку
+          </button>
+          <small class="cta-form__agree">
+            Нажимая кнопку «Отправить заявку», вы соглашаетесь с&nbsp;<a
+              href="#"
+              >политикой обработки персональных данных</a
+            >
+          </small>
+        </form>
+      </div>
+
+      <div class="cta-b__img">
+        <img src="./img/cta-b.webp" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__left">
+        <div class="footer__col">
+          <div class="footer__capture title5">Отдел продаж</div>
+          <address class="footer__address footer-add">
+            <a href="tel:+7 (423) 297-77-27" class="footer-add__link">
+              +7 (423) 297-77-27
+            </a>
+            <a href="mailto:info@molodezhnydom.ru" class="footer-add__link"
+              >info@molodezhnydom.ru</a
+            >
+            <p class="footer-add__link">
+              Владивосток, ул. Адмирала Горшкова, 8, офис 4
+            </p>
+            <p class="footer-add__link">Пн - Пт с 9:00 до 18:00</p>
+          </address>
+          <div class="footer__map" id="footer-map"></div>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__capture title5">Навигация по сайту</div>
+
+          <nav class="footer__nav nav">
+            <ul class="list-reset nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">О проекте</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Галерея</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Новости</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Ход строительства</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">О застройщике</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Выбрать квартиру</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Презентация</a>
+              </li>
+            </ul>
+            <ul class="list-reset nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Онлайн камера на стройплощадке</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Планировка этажа</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Калькулятор ипотеки</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <a href="./" class="footer__logo">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+
+        <div class="footer__block">
+          <a href="#" class="footer-add__link">
+            Политика обработки персональных данных
+          </a>
+          <a href="#" class="footer-add__link">Документация</a>
+        </div>
+
+        <div class="footer__block">
+          <small>Не является публичной офертой</small>
+          <small>ООО СЗ “Молодёжный”, 2021 ©</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="navigation">
+  <ul class="list-reset navigation__list">
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/01.svg" alt="" />
+        </span>
+        О проекте
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/02.svg" alt="" />
+        </span>
+        Галерея
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/03.svg" alt="" />
+        </span>
+        Новости
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link">
+        <span>
+          <img src="./img/menu/04.svg" alt="" />
+        </span>
+        Контакты
+      </a>
+    </li>
+    <li class="navigation__item">
+      <a href="#" class="navigation__link burger-btn" data-burger>
+        <span>
+          <img src="./img/menu/05.svg" alt="" />
+        </span>
+        Меню
+      </a>
+    </li>
+  </ul>
+</div>
+ <div class="burger-menu" data-menu data-menu-overlay>
+  <div class="burger-menu__body" data-menu-body>
+    <nav class="nav burger-menu__nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">О проекте</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Ход строительства</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">О застройщике</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="burger-menu__call">
+      <a href="tel:+7 423 287 77 27" class="burger-menu__tel">
+        +7 423 287 77 27
+      </a>
+      <button class="btn-reset burger-menu__capture">Заказать звонок</button>
+    </div>
+  </div>
+
+  <button class="burger-menu__close btn-reset">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.92893 1.92898L16.0711 16.0711M16.0711 1.92898L1.92893 16.0711"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+</div>
+
+<script>
+  ymaps.ready(function () {
+    const ourCompany = [43.162565, 131.94896];
+    let suggestionsDiv = document.getElementById("suggestions");
+    let activeIndex = -1;
+    let markers = [];
+    let multiRoute;
+    var myMap = new ymaps.Map(
+        "footer-map",
+        {
+          center: ourCompany,
+          zoom: 14,
+        },
+        {
+          searchControlProvider: "yandex#search",
+        }
+      ),
+      myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(),
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/placemark-footer.svg",
+          iconImageSize: [30, 30],
+          iconImageOffset: [0, -34],
+        }
+      );
+
+    myMap.geoObjects.add(myPlacemark);
+
+    myMap.controls.remove("geolocationControl"); // удаляем геолокацию
+    myMap.controls.remove("searchControl"); // удаляем поиск
+    myMap.controls.remove("trafficControl"); // удаляем контроль трафика
+    myMap.controls.remove("typeSelector"); // удаляем тип
+    myMap.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+    myMap.controls.remove("zoomControl"); // удаляем контрол зуммирования
+    myMap.controls.remove("rulerControl"); // удаляем контрол правил
+    myMap.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+  });
+</script>
+
+    </div>
+  </body>
+</html>

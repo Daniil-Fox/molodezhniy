@@ -1,10 +1,10 @@
 .hero {
-  margin-bottom: 6rem;
-  padding: 7rem 0;
+  margin-bottom: 18.4rem;
+  padding-top: 7rem;
   position: relative;
   @include mobile {
-    padding-bottom: 3rem;
     margin: 0;
+    margin-bottom: 9.8rem;
   }
   &::before {
     content: "";

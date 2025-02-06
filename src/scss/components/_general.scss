@@ -58,6 +58,15 @@ button:disabled {
       color: var(--white);
       background-color: var(--black);
     }
+    &:active {
+      &::after {
+        opacity: 0.15;
+      }
+    }
+    &:disabled {
+      border-color: var(--base-grey);
+      color: var(--base-grey);
+    }
   }
 
   &--orange {
@@ -94,6 +103,32 @@ button:disabled {
       color: var(--base-grey);
       background: var(--light-grey);
       border: 2px solid var(--light-grey);
+    }
+  }
+
+  &--orange-stroke {
+    border-color: var(--orange);
+    color: var(--orange);
+
+    @include hover {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+
+    &:focus {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.15;
+      }
+    }
+
+    &:disabled {
+      border-color: var(--base-grey);
+      color: var(--base-grey);
     }
   }
 
@@ -298,6 +333,13 @@ button:disabled {
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 120%;
+  color: var(--black);
+}
+.desc2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 135%;
   color: var(--black);
 }
 .desc3 {

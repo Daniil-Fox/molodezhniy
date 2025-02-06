@@ -1,11 +1,9 @@
 .benefits {
-  padding: 7rem 0;
-  margin-bottom: 5rem;
+  margin-bottom: 18.7rem;
   position: relative;
   @include mobile {
     margin: 0;
-    padding: 3rem 0;
-    padding-top: 2rem;
+    margin-bottom: 8.5rem;
   }
   &::before {
     content: "";

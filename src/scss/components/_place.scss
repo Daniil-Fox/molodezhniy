@@ -1,7 +1,7 @@
 .place {
-  padding: 7.5rem 0;
+  margin-bottom: 17rem;
   @include mobile {
-    padding-top: 5.85rem;
+    margin-bottom: 7.35rem;
   }
   &__title {
     margin-bottom: 2.2rem;
@@ -170,4 +170,8 @@
       border-radius: 1.5rem;
     }
   }
+}
+
+.place--sec {
+  margin-bottom: 20rem;
 }

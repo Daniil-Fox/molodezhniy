@@ -1,12 +1,11 @@
 .cta {
-  padding: 7rem 0;
+  padding-top: 1.5rem;
 
-  @include mobile {
-    padding: 6.6rem 0;
-    padding-bottom: 2rem;
-  }
   &:not(:last-child) {
-    margin-bottom: 4.7rem;
+    margin-bottom: 18.6rem;
+    @include mobile {
+      margin-bottom: 8.7rem;
+    }
   }
   &__container {
     display: flex;
@@ -98,14 +97,13 @@
 }
 
 .cta-b {
-  padding: 7rem 16.4rem;
+  padding: 0rem 16.4rem;
   padding-left: 16.6rem;
-  margin-bottom: 13rem;
+  margin-bottom: 20.1rem;
   position: relative;
   @include mobile {
-    padding: 4rem 0;
-    padding-top: 5.2rem;
-    margin-bottom: 5.7rem;
+    padding: 0;
+    margin-bottom: 9.7rem;
   }
   &::before {
     content: "";
