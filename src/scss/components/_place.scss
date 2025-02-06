@@ -174,4 +174,8 @@
 
 .place--sec {
   margin-bottom: 20rem;
+
+  @include mobile {
+    margin-bottom: 17.5rem;
+  }
 }

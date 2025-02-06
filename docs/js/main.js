@@ -96,7 +96,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.FreeMode]);
 new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".about__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -107,6 +107,19 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".about__slider", {
   navigation: {
     prevEl: ".about-prev",
     nextEl: ".about-next"
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".about-benefits__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  freeMode: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 20
+    },
+    769: {
+      spaceBetween: 10
+    }
   }
 });
 window.addEventListener("DOMContentLoaded", () => {

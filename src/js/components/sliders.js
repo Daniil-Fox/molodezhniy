@@ -1,7 +1,7 @@
 import { Swiper } from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, FreeMode]);
 new Swiper(".about__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -13,6 +13,20 @@ new Swiper(".about__slider", {
   navigation: {
     prevEl: ".about-prev",
     nextEl: ".about-next",
+  },
+});
+
+new Swiper(".about-benefits__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  freeMode: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+    },
+    769: {
+      spaceBetween: 10,
+    },
   },
 });
 
