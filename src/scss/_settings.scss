@@ -111,3 +111,15 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+[data-panzoom-action],
+[data-fancybox-toggle-fullscreen] {
+  display: none;
+}
+[data-fancybox-close] {
+  background: none;
+
+  @include hover {
+    background: none !important;
+  }
+}

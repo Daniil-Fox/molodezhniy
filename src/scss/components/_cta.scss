@@ -97,8 +97,6 @@
 }
 
 .cta-b {
-  padding: 0rem 16.4rem;
-  padding-left: 16.6rem;
   margin-bottom: 20.1rem;
   position: relative;
   @include mobile {
@@ -110,7 +108,7 @@
     position: absolute;
     z-index: -1;
     left: -48.2rem;
-    top: -19.7rem;
+    top: -26.7rem;
     transform: rotateZ(-90deg);
     width: 124rem;
     height: 124rem;
@@ -128,6 +126,7 @@
     }
   }
   &__container {
+    margin: 0rem 14.6rem;
     background-color: #fff;
     padding: 8rem;
     padding-top: 6.6rem;
@@ -136,6 +135,7 @@
     position: relative;
 
     @include mobile {
+      margin: 0;
       padding: 4rem;
       padding-top: 42.6rem;
     }
@@ -223,7 +223,27 @@
     }
   }
 }
-
+.cta-b--single {
+  &::before {
+    left: -80.2rem;
+    top: -18.7rem;
+    width: 146rem;
+    height: 146rem;
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      transform: rotate(-90deg);
+      left: -43rem;
+      top: -13rem;
+    }
+  }
+  .cta-b__form .cta-form__input:last-of-type {
+    margin-bottom: 5.5rem;
+    @include mobile {
+      margin-bottom: 2.25rem;
+    }
+  }
+}
 .cta-form {
   @include mobile {
     padding: 0 0.2rem;

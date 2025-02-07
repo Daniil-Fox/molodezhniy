@@ -1,0 +1,30 @@
+.news-hero {
+  padding-top: 6rem;
+  margin-bottom: 20rem;
+  position: relative;
+  @include mobile {
+    padding-top: 5.6rem;
+    margin-bottom: 16.8rem;
+  }
+
+  &__title {
+    padding: 5.4rem 4.4rem;
+    padding-bottom: 5rem;
+    margin-bottom: 4.9rem;
+    background: #fff;
+    mask-image: url("./../img/news/header-mask.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @include mobile {
+      mask-image: url("./../img/news/header-mask-mob.svg");
+      margin-bottom: 2rem;
+      padding: 4rem;
+    }
+  }
+
+  .news-section__items {
+    gap: 3.5rem 4rem;
+  }
+}
