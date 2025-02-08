@@ -168,7 +168,15 @@
       </button>
     </div>
     <div class="contacts-hero__img contacts-hero__img--mob">
-      <img src="./img/contacts/01.webp" alt="" />
+      <picture>
+        <source
+          srcset="./img/contacts/01-mob.webp"
+          type="image/webp"
+          media="(max-width: 768px)"
+        />
+        <source srcset="./img/contacts/01.webp" type="image/webp" />
+        <img src="./img/contacts/01.webp" alt="" />
+      </picture>
     </div>
     <address class="contacts-hero__address contacts-add">
       <div class="contacts-add__block">
