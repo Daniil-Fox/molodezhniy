@@ -255,6 +255,26 @@
     }
   }
 }
+
+.cta-b--contacts {
+  margin-bottom: 22rem;
+  &::before {
+    left: -71.4rem;
+    top: -14rem;
+    width: 146rem;
+    height: 146rem;
+    transform: rotateZ(180deg);
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      transform: rotate(-90deg);
+      left: -42rem;
+      top: -13rem;
+    }
+  }
+}
+
 .cta-form {
   @include mobile {
     padding: 0 0.2rem;
