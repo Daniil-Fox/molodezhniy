@@ -3,6 +3,7 @@
   box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.07);
   background: var(--white);
   border-radius: 0 0 3rem 3rem;
+  z-index: 100;
   @include mobile {
     padding: 2.5rem 0;
     padding-bottom: 2.6rem;
@@ -73,6 +74,16 @@
     font-size: 2rem;
     line-height: 120%;
     color: var(--black);
+    transition: 0.2s ease-in;
+    @include hover {
+      color: var(--pink);
+    }
+    &:focus {
+      color: var(--pink);
+    }
+    &:active {
+      color: var(--pink-active);
+    }
   }
   &__recall {
     font-weight: 500;
@@ -80,5 +91,15 @@
     line-height: 120%;
     text-align: right;
     color: var(--black);
+    transition: 0.2s ease-in;
+    @include hover {
+      color: var(--pink);
+    }
+    &:focus {
+      color: var(--pink);
+    }
+    &:active {
+      color: var(--pink-active);
+    }
   }
 }

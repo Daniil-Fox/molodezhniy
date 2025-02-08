@@ -149,3 +149,16 @@
     color: var(--black);
   }
 }
+a.footer-add__link {
+  transition: 0.2s ease-in;
+
+  @include hover {
+    color: var(--pink);
+  }
+  &:focus {
+    color: var(--pink);
+  }
+  &:active {
+    color: var(--pink-active);
+  }
+}

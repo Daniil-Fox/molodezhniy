@@ -357,6 +357,41 @@
           </div>
         </div>
       </div>
+
+      <div id="zoom-controls" class="custom-zoom-container">
+        <button id="zoom-in" class="custom-zoom-button">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 9H16.5M9 1.5V16.5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button id="zoom-out" class="custom-zoom-button">
+          <svg
+            width="18"
+            height="3"
+            viewBox="0 0 18 3"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 1.66663H16.5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -399,6 +434,25 @@
     // myMap.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
     const placeForm = document.querySelector(".place-form");
 
+    var zoomInButton = document.getElementById("zoom-in");
+    var zoomOutButton = document.getElementById("zoom-out");
+
+    // Обработчики событий для кнопок
+    zoomInButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom < 19) {
+        // максимальный zoom
+        myMap.setZoom(currentZoom + 1);
+      }
+    });
+
+    zoomOutButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom > 0) {
+        // минимальный zoom
+        myMap.setZoom(currentZoom - 1);
+      }
+    });
     if (placeForm) {
       const input = placeForm.querySelector(".place-form__input");
       const btn = placeForm.querySelector(".place-form__btn");
@@ -723,6 +777,7 @@
                   class="cta-form__input"
                   id="ct1"
                 />
+                <span></span>
               </div>
             </div>
             <div class="cta-form__wrapper">
@@ -736,6 +791,7 @@
                   class="cta-form__input"
                   id="ct2"
                 />
+                <span></span>
               </div>
             </div>
             <div class="cta-form__wrapper">
@@ -747,6 +803,7 @@
                   class="cta-form__input"
                   id="ct2"
                 />
+                <span></span>
               </div>
             </div>
           </div>
@@ -786,7 +843,17 @@
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/01.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/01-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/01.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/01.webp" alt="" />
+            </picture>
           </div>
         </article>
         <article class="benefits__item swiper-slide ben-item">
@@ -800,7 +867,17 @@
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/02.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/02-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/02.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/02.webp" alt="" />
+            </picture>
           </div>
         </article>
         <article class="benefits__item swiper-slide ben-item">
@@ -815,7 +892,17 @@
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/03.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/03-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/03.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/03.webp" alt="" />
+            </picture>
           </div>
         </article>
         <article class="benefits__item swiper-slide ben-item">
@@ -824,14 +911,26 @@
             <p class="desc3 ben-item__desc">
               Свободная планировка позволяет владельцу квартиры самостоятельно
               решить сколько комнат ему потребуется на&nbsp;купленной площади.
-              Таким образом, человек планирует и&nbsp;делает квартиру
-              под&nbsp;свои интересы, учитывая потребности своей семьи,
-              количества детей.
+              <span>
+                Таким образом, человек планирует и&nbsp;делает квартиру
+                под&nbsp;свои интересы, учитывая потребности своей семьи,
+                количества детей.
+              </span>
             </p>
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/04.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/04-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/04.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/04.webp" alt="" />
+            </picture>
           </div>
         </article>
         <article class="benefits__item swiper-slide ben-item">
@@ -845,7 +944,17 @@
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/05.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/05-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/05.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/05.webp" alt="" />
+            </picture>
           </div>
         </article>
         <article class="benefits__item swiper-slide ben-item">
@@ -853,15 +962,28 @@
             <h4 class="ben-item__title">Безопасность</h4>
             <p class="desc3 ben-item__desc">
               Всё, происходящее в&nbsp;зонах общего пользования, будут
-              фиксировать камеры видеонаблюдения. Вид из&nbsp;окон квартир
-              охватит весь двор: можно будет рассмотреть каждого гостя
-              территории ЖК и&nbsp;каждый заезжающий на&nbsp;неё автомобиль.
+              фиксировать камеры видеонаблюдения.
+              <span>
+                Вид из&nbsp;окон квартир охватит весь двор: можно будет
+                рассмотреть каждого гостя территории ЖК и&nbsp;каждый заезжающий
+                на&nbsp;неё автомобиль.
+              </span>
               В&nbsp;подъездах&nbsp;же будут круглосуточно дежурить консьержи
             </p>
             <a href="#" class="ben-item__link">подробнее</a>
           </div>
           <div class="ben-item__img">
-            <img src="./img/benefits/06.webp" alt="" />
+            <picture>
+              <source
+                srcset="./img/benefits/06-mob.webp"
+                media="(max-width: 768px)"
+              />
+              <source
+                srcset="./img/benefits/06.webp"
+                media="(max-width: 768px)"
+              />
+              <img src="./img/benefits/06.webp" alt="" />
+            </picture>
           </div>
         </article>
       </div>

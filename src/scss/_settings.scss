@@ -123,3 +123,87 @@ a {
     background: none !important;
   }
 }
+.custom-zoom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  right: 5.2rem;
+  transform: translateY(-50%);
+  @include mobile {
+    top: 4.4rem;
+    right: 4.2rem;
+    transform: none;
+  }
+}
+
+.custom-zoom-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.custom-zoom-button:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-zoom-button:active {
+  background-color: #e0e0e0;
+}
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 100%;
+  border-color: var(--base-grey);
+  color: var(--black);
+  &::placeholder {
+    color: var(--base-grey);
+  }
+
+  @include hover {
+    border-color: var(--dark-grey);
+
+    &::placeholder {
+      color: var(--dark-grey);
+    }
+  }
+  &:focus {
+    border-color: var(--black);
+    color: var(--black);
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+}
+
+button,
+input,
+a {
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,5 +1,40 @@
 .about-benefits {
   margin-bottom: 18.7rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -116rem;
+    top: 58.5rem;
+    z-index: -1;
+    width: 151rem;
+    aspect-ratio: 1 / 1;
+    transform: rotate(-30deg);
+    background-image: url("./../img/lines/main2.svg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    @include mobile {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -105.2rem;
+    top: 1.2rem;
+    z-index: -1;
+    width: 151rem;
+    aspect-ratio: 1 / 1;
+    transform: rotate(-30deg);
+    background-image: url("./../img/lines/main2.svg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    @include mobile {
+      display: none;
+    }
+  }
   @include mobile {
     margin-bottom: 8rem;
   }
@@ -26,6 +61,11 @@
   }
   &__slider {
     margin-bottom: 4rem;
+    @include mobile {
+      margin: 0 calc(-1 * var(--container-offset));
+      padding: 0 var(--container-offset);
+      margin-bottom: 4rem;
+    }
   }
   &__tab {
     min-width: 24.575rem;
@@ -49,7 +89,12 @@
     @include hover {
       color: var(--orange);
     }
-
+    &:focus {
+      color: var(--orange);
+    }
+    &:active {
+      color: var(--orange-active);
+    }
     @include mobile {
       min-width: unset;
       padding: 2.5rem 3.1rem;

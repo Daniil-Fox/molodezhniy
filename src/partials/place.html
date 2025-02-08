@@ -39,6 +39,41 @@
           </div>
         </div>
       </div>
+
+      <div id="zoom-controls" class="custom-zoom-container">
+        <button id="zoom-in" class="custom-zoom-button">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 9H16.5M9 1.5V16.5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button id="zoom-out" class="custom-zoom-button">
+          <svg
+            width="18"
+            height="3"
+            viewBox="0 0 18 3"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 1.66663H16.5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -81,6 +116,25 @@
     // myMap.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
     const placeForm = document.querySelector(".place-form");
 
+    var zoomInButton = document.getElementById("zoom-in");
+    var zoomOutButton = document.getElementById("zoom-out");
+
+    // Обработчики событий для кнопок
+    zoomInButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom < 19) {
+        // максимальный zoom
+        myMap.setZoom(currentZoom + 1);
+      }
+    });
+
+    zoomOutButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom > 0) {
+        // минимальный zoom
+        myMap.setZoom(currentZoom - 1);
+      }
+    });
     if (placeForm) {
       const input = placeForm.querySelector(".place-form__input");
       const btn = placeForm.querySelector(".place-form__btn");

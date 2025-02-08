@@ -71,14 +71,14 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   resizableSwiper("(max-width: 768px)", ".partners__slider", {
-    loop: true,
+    // loop: true,
     spaceBetween: 20,
     slidesPerView: "auto",
   });
 
   resizableSwiper("(max-width: 768px)", ".benefits__slider", {
-    loop: true,
     spaceBetween: 20,
     slidesPerView: "auto",
+    centeredSlides: true,
   });
 });

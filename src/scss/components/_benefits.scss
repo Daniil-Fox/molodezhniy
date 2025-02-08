@@ -47,6 +47,14 @@
       top: -37.4rem;
     }
   }
+  &__slider {
+    @include mobile {
+      margin: 0 calc(-1 * var(--container-offset));
+      .swiper-slide {
+        width: 51.6rem;
+      }
+    }
+  }
   &__title {
     margin-bottom: 5rem;
 
@@ -94,12 +102,19 @@
 
   @include mobile {
     flex-direction: column;
+    justify-content: space-between;
     gap: 0;
-    mask-image: url("./../img/benefits/mask-mob.svg");
+
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     background-position: center;
     height: 58rem;
+    &:nth-child(odd) {
+      mask-image: url("./../img/benefits/mask-mob.svg");
+    }
+    &:nth-child(even) {
+      mask-image: url("./../img/benefits/mask-mob-2.svg");
+    }
   }
   &__content {
     display: flex;
@@ -127,6 +142,7 @@
     font-size: 3.2rem;
     line-height: 120%;
     color: var(--black);
+    transition: 0.2s ease-in;
 
     @include mobile {
       font-size: 3rem;
@@ -135,7 +151,11 @@
   }
   &__desc {
     line-height: 123.5%;
-
+    span {
+      @include mobile {
+        display: none;
+      }
+    }
     @include mobile {
       line-height: 120%;
     }
@@ -146,7 +166,16 @@
     font-size: 1.6rem;
     line-height: 120%;
     color: var(--black);
-
+    transition: 0.2s ease-in;
+    @include hover {
+      color: var(--pink);
+    }
+    &:focus {
+      color: var(--pink);
+    }
+    &:active {
+      color: var(--pink-active);
+    }
     @include mobile {
       display: none;
     }
@@ -179,10 +208,19 @@
       transition: 0.2s ease-in;
     }
   }
-
   @include hover {
-    .ben-item__img img {
-      transform: scale(1.05);
+    .ben-item__title {
+      color: var(--pink);
+    }
+  }
+  &:focus {
+    .ben-item__title {
+      color: var(--pink);
+    }
+  }
+  &:active {
+    .ben-item__title {
+      color: var(--pink-active);
     }
   }
 }

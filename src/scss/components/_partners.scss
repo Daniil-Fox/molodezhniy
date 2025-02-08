@@ -1,5 +1,5 @@
 .partners {
-  margin-bottom: 18.4rem;
+  margin-bottom: 17.4rem;
   padding-top: 2rem;
   position: relative;
   @include mobile {
@@ -75,6 +75,12 @@
 
     .swiper-slide {
       width: auto;
+
+      @include mobile {
+        &:last-child {
+          display: none;
+        }
+      }
     }
   }
 
@@ -134,7 +140,16 @@
       line-height: 120%;
       text-align: center;
       color: var(--black);
-
+      transition: 0.2s ease-in;
+      @include hover {
+        color: var(--blue);
+      }
+      &:focus {
+        color: var(--blue);
+      }
+      &:active {
+        color: var(--blue-active);
+      }
       @include mobile {
         font-size: 3rem;
       }
@@ -174,28 +189,35 @@
         }
       }
     }
+    @for $i from 1 to 6 {
+      &:nth-last-child(#{$i}) {
+        height: 14rem;
+        @include mobile {
+          height: unset;
+        }
+      }
+    }
 
     &:nth-child(1) {
       width: 27rem;
     }
     &:nth-child(2) {
       width: 22rem;
-      margin-right: 1rem;
+      // margin-right: 1rem;
     }
     &:nth-child(3) {
       width: 23rem;
     }
     &:nth-child(4) {
       width: 22rem;
-      margin-right: -0.5rem;
+      // margin-right: -0.5rem;
     }
     &:nth-child(5) {
       width: 40.5rem;
-      margin-right: 0.95rem;
+      // margin-right: 0.95rem;
     }
     &:nth-child(6) {
       width: 42.5rem;
-      margin-right: 0.95rem;
     }
 
     &:nth-child(7) {
@@ -203,14 +225,14 @@
     }
     &:nth-child(8) {
       width: 34.4rem;
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
     &:nth-child(9) {
       width: 33.4rem;
     }
     &:nth-child(10) {
       width: 36.3rem;
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
     &:nth-child(11) {
       width: 40rem;
@@ -221,14 +243,14 @@
     }
     &:nth-child(13) {
       width: 41.9rem;
-      margin-right: 1.8rem;
+      // margin-right: 1.8rem;
     }
     &:nth-child(14) {
       width: 28.2rem;
     }
     &:nth-child(15) {
       width: 29.8rem;
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
     &:nth-child(16) {
       width: 45rem;

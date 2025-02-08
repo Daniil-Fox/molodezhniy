@@ -17,5 +17,11 @@
     @include hover {
       color: var(--pink);
     }
+    &:focus {
+      color: var(--pink);
+    }
+    &:active {
+      color: var(--pink-active);
+    }
   }
 }
