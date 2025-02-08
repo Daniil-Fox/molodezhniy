@@ -4942,6 +4942,19 @@ a.footer-add__link:active {
 }
 .contacts-add__text a {
   color: inherit;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+@media (any-hover: hover) {
+  .contacts-add__text a:hover {
+    color: var(--orange);
+  }
+}
+.contacts-add__text a:focus {
+  color: var(--orange);
+}
+.contacts-add__text a:active {
+  color: var(--orange-active);
 }
 .contacts-add__text p {
   margin: 0;

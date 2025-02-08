@@ -199,6 +199,16 @@
     }
     a {
       color: inherit;
+      transition: 0.2s ease-in;
+      @include hover {
+        color: var(--orange);
+      }
+      &:focus {
+        color: var(--orange);
+      }
+      &:active {
+        color: var(--orange-active);
+      }
     }
     p {
       margin: 0;
