@@ -62,21 +62,62 @@
       padding: 4rem;
     }
   }
-
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+  &__more {
+    font-size: 2rem;
+    padding: 9rem;
+    border-radius: 1.5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.8rem;
+    @include mobile {
+      width: 100%;
+      padding-top: 1.3rem;
+    }
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+    &:not(:last-child) {
+      margin-bottom: 6.2rem;
+      @include mobile {
+        margin-bottom: 4rem;
+      }
+    }
     @include mobile {
       display: flex;
       flex-direction: column;
       gap: 3rem;
     }
-  }
 
-  &__item {
-    &:last-child {
-      grid-column: 2 span;
+    &--m3 {
+      .gallery-hero__item {
+        &:last-child {
+          grid-column: 2 span;
+
+          .gallery-item__img {
+            border-radius: 3rem;
+            overflow: hidden;
+            margin-bottom: 2.4rem;
+            mask: none;
+            @include mobile {
+              margin-bottom: 0;
+            }
+          }
+          .gallery-item__info {
+            border-radius: 3rem;
+            padding-bottom: 4.9rem;
+            padding-top: 4.6rem;
+            mask: none;
+            @include mobile {
+              padding: 2.9rem 4.2rem 3.1rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -120,8 +161,9 @@
   }
   &__name {
     font-weight: 500;
+    transition: 0.2s ease-in;
   }
-  &:nth-child(3n + 1) {
+  &:nth-child(2n + 1) {
     .gallery-item__img {
       mask-image: url("./../img/gallery/g-mask-1.svg");
     }
@@ -129,31 +171,12 @@
       mask-image: url("./../img/gallery/info-mask-1.svg");
     }
   }
-  &:nth-child(3n + 2) {
+  &:nth-child(2n + 2) {
     .gallery-item__img {
       mask-image: url("./../img/gallery/g-mask-2.svg");
     }
     .gallery-item__info {
       mask-image: url("./../img/gallery/info-mask-2.svg");
-    }
-  }
-  &:last-child {
-    .gallery-item__img {
-      border-radius: 3rem;
-      overflow: hidden;
-      margin-bottom: 2.4rem;
-      @include mobile {
-        margin-bottom: 0;
-      }
-    }
-    .gallery-item__info {
-      border-radius: 3rem;
-      padding-bottom: 4.9rem;
-      padding-top: 4.6rem;
-
-      @include mobile {
-        padding: 2.9rem 4.2rem 3.1rem;
-      }
     }
   }
 
@@ -173,6 +196,23 @@
       .gallery-item__info {
         mask-image: url("./../img/gallery/info-mask-2-mob.svg");
       }
+    }
+  }
+  transition: 0.2s ease-in;
+
+  @include hover {
+    .gallery-item__name {
+      color: var(--pink);
+    }
+  }
+  &:focus {
+    .gallery-item__name {
+      color: var(--pink);
+    }
+  }
+  &:active {
+    .gallery-item__name {
+      color: var(--pink-active);
     }
   }
 }

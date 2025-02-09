@@ -112,7 +112,7 @@
   position: relative;
   @include mobile {
     padding: 0;
-    margin-bottom: 9.7rem;
+    margin-bottom: 7rem;
   }
   &::before {
     content: "";
@@ -258,6 +258,9 @@
 
 .cta-b--contacts {
   margin-bottom: 22rem;
+  @include mobile {
+    margin-bottom: 7rem;
+  }
   &::before {
     left: -71.4rem;
     top: -14rem;
