@@ -109,7 +109,7 @@ html {
 }
 @media (min-width: 1920px) {
   html {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 }
 @media (max-width: 576px) {
