@@ -616,6 +616,25 @@
     // myMap.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
     const placeForm = document.querySelector(".place-form");
 
+    var zoomInButton = document.getElementById("zoom-in");
+    var zoomOutButton = document.getElementById("zoom-out");
+
+    // Обработчики событий для кнопок
+    zoomInButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom < 19) {
+        // максимальный zoom
+        myMap.setZoom(currentZoom + 1);
+      }
+    });
+
+    zoomOutButton.addEventListener("click", function () {
+      var currentZoom = myMap.getZoom();
+      if (currentZoom > 0) {
+        // минимальный zoom
+        myMap.setZoom(currentZoom - 1);
+      }
+    });
     if (placeForm) {
       const input = placeForm.querySelector(".place-form__input");
       const btn = placeForm.querySelector(".place-form__btn");
@@ -697,9 +716,19 @@
       }
 
       function addRoute(startCoords, endCoords) {
-        multiRoute = new ymaps.multiRouter.MultiRoute({
-          referencePoints: [startCoords, endCoords],
-        });
+        multiRoute = new ymaps.multiRouter.MultiRoute(
+          {
+            referencePoints: [startCoords, endCoords],
+          },
+          {
+            results: 1,
+            routeStrokeWidth: 5,
+            routeStrokeColor: "#FF6B00",
+            routeActiveStrokeColor: "#FF6B00",
+            routePedestrianSegmentStrokeColor: "#FF6B00",
+            routeActivePedestrianSegmentStrokeColor: "#FF6B00",
+          }
+        );
 
         myMap.geoObjects.add(multiRoute);
       }

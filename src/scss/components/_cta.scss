@@ -256,6 +256,33 @@
   }
 }
 
+.cta-b--builder {
+  &::before {
+    transform: rotate(-105deg);
+    width: 146rem;
+    height: 146rem;
+    left: -59rem;
+    top: -10rem;
+  }
+}
+.cta-b--news {
+  &::before {
+    transform: rotate(150deg);
+    width: 150rem;
+    height: 150rem;
+    left: -82rem;
+    top: -32rem;
+
+    @include mobile {
+      width: 75rem;
+      height: 75rem;
+      transform: rotate(-90deg);
+      left: -43rem;
+      top: -14rem;
+    }
+  }
+}
+
 .cta-b--contacts {
   margin-bottom: 22rem;
   @include mobile {

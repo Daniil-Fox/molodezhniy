@@ -10962,6 +10962,17 @@ if (galleryContainer) {
     });
   }
 }
+const videoWrapper = document.querySelectorAll(".video__wrapper");
+if (videoWrapper.length > 0) {
+  videoWrapper.forEach(wrapper => {
+    const video = wrapper.querySelector("video");
+    wrapper.addEventListener("click", e => {
+      video.setAttribute("controls", "");
+      video.play();
+      wrapper.classList.add("video__wrapper--start");
+    });
+  });
+}
 })();
 
 /******/ })()

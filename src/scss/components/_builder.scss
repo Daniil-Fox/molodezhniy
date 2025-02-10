@@ -1,0 +1,279 @@
+.builder {
+  padding: 6rem 14.6rem;
+  margin-bottom: 14rem;
+  position: relative;
+  .container {
+    max-width: calc(151.2rem + var(--container-offset) * 2);
+  }
+  @include mobile {
+    padding: 6rem 0;
+    padding-top: 5.7rem;
+    margin-bottom: 10.7rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -74.5rem;
+    top: 7.8rem;
+    width: 150rem;
+    height: 150rem;
+    transform: rotate(-90deg);
+    background-image: url("./../img/lines/main2.svg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      width: 73rem;
+      height: 73rem;
+      left: -44rem;
+      top: -12.5rem;
+      transform: rotate(-37.61deg);
+      background-image: url("./../img/lines/main1.svg");
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -52.5rem;
+    top: 5rem;
+    width: 150rem;
+    height: 150rem;
+    transform: rotate(-30deg);
+    background-image: url("./../img/lines/main2.svg");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      width: 73rem;
+      height: 73rem;
+      right: -45rem;
+      top: 111rem;
+      transform: rotate(-37.61deg);
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 6rem;
+    padding: 4.45rem 6rem;
+    mask-image: url("./../img/builder/header-mask.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #fff;
+
+    @include mobile {
+      mask-image: url("./../img/builder/header-mask-mob.svg");
+      padding: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 6rem;
+    padding: 9.2rem 10rem;
+    background-color: #fff;
+    border-radius: 3rem;
+
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: var(--black);
+    line-height: 1.35;
+
+    @include mobile {
+      padding: 3.2rem 4rem;
+      font-size: 2rem;
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+
+      font-weight: 500;
+      font-size: 3rem;
+      &:not(:last-child) {
+        margin-bottom: 0.7rem;
+        @include mobile {
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      @include mobile {
+        font-size: 2.4rem;
+      }
+    }
+    p,
+    ul,
+    ol {
+      padding: 0;
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+
+        @include mobile {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      height: 60rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 3rem;
+      @include mobile {
+        height: 24.6rem;
+      }
+      &:not(:first-child) {
+        margin-top: 5.1rem;
+        @include mobile {
+          margin-top: 2.4rem;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 5.1rem;
+        @include mobile {
+          margin-bottom: 2.2rem;
+        }
+      }
+    }
+  }
+
+  &__about {
+    p,
+    ul,
+    ol {
+      &:not(:last-child) {
+        margin-bottom: 2.9rem;
+
+        @include mobile {
+          margin-bottom: 2.7rem;
+        }
+      }
+    }
+  }
+
+  &__projects {
+    background-color: #fff;
+    padding: 9.2rem 10rem;
+    padding-bottom: 10rem;
+    border-radius: 3rem;
+    @include mobile {
+      padding: 3.5rem 4rem;
+      padding-bottom: 4.2rem;
+      margin: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -31.5rem;
+      top: 42.7%;
+      width: 151rem;
+      height: 151rem;
+      transform: rotateY(180deg) rotateZ(240deg);
+      background-image: url("./../img/lines/main3.svg");
+      background-size: contain;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        width: 75rem;
+        height: 75rem;
+        top: 33%;
+        right: -2.8rem;
+        transform: rotateY(180deg) rotateZ(37.61deg);
+      }
+    }
+  }
+  &__text {
+    margin: 0;
+    margin-bottom: 5.2rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: var(--black);
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.6rem 4rem;
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2.8rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.9rem;
+      @include mobile {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__bottom {
+    p {
+      @include mobile {
+        font-size: 2.4rem;
+      }
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+        @include mobile {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 1.4rem 2.85rem;
+    padding-bottom: 1.8rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    @include mobile {
+      padding: 2.3rem;
+      padding-top: 2.2rem;
+      padding-bottom: 2.6rem;
+    }
+  }
+}
+
+.builder-item {
+  &__img {
+    margin-bottom: 1.6rem;
+    height: 30rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    @include mobile {
+      margin-bottom: 0.4rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__capture {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 120%;
+    color: var(--black);
+    @include mobile {
+      font-size: 1.6rem;
+    }
+  }
+}

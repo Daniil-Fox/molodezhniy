@@ -147,11 +147,11 @@ a {
   height: 4rem;
   cursor: pointer;
   text-align: center;
-
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  box-shadow: 0 4px 10rem rgba(#000, 0.05);
   @include mobile {
     width: 6rem;
     height: 6rem;

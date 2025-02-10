@@ -534,9 +534,19 @@
       }
 
       function addRoute(startCoords, endCoords) {
-        multiRoute = new ymaps.multiRouter.MultiRoute({
-          referencePoints: [startCoords, endCoords],
-        });
+        multiRoute = new ymaps.multiRouter.MultiRoute(
+          {
+            referencePoints: [startCoords, endCoords],
+          },
+          {
+            results: 1,
+            routeStrokeWidth: 5,
+            routeStrokeColor: "#FF6B00",
+            routeActiveStrokeColor: "#FF6B00",
+            routePedestrianSegmentStrokeColor: "#FF6B00",
+            routeActivePedestrianSegmentStrokeColor: "#FF6B00",
+          }
+        );
 
         myMap.geoObjects.add(multiRoute);
       }
