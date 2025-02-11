@@ -385,3 +385,14 @@ button:disabled {
 .suggestion-item:hover {
   background-color: #f0f0f0;
 }
+
+.simplebar-track {
+  width: 3rem !important;
+  border-radius: 1rem;
+  border: 2px solid var(--light-grey);
+}
+.simplebar-scrollbar {
+  width: 0.2rem;
+  left: 50%;
+  background-color: var(--black);
+}

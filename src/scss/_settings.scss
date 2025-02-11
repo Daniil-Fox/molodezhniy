@@ -16,7 +16,7 @@ html {
 
   background: rgba(0, 0, 0, 0.03);
   @media (min-width: 1920px) {
-    font-size: 10px !important;
+    font-size: 10px;
   }
   @media (max-width: 576px) {
     font-size: calc(100vw / 57.6);
@@ -205,4 +205,15 @@ a {
   &:focus {
     outline: none;
   }
+}
+.gm-scrollbar .gm-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Бегунок */
+.gm-scrollbar .gm-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+  width: 8px;
 }

@@ -64,8 +64,10 @@
     "graph-tabs": "^1.0.2",
     "inputmask": "^5.0.8",
     "just-validate": "^4.3.0",
+    "overlayscrollbars": "^2.10.1",
     "rellax": "^1.12.1",
-    "simplebar": "^6.2.5",
+    "resize-observer-polyfill": "^1.5.1",
+    "simplebar": "^6.3.0",
     "swiped-events": "^1.1.9",
     "swiper": "^11.2.2"
   }

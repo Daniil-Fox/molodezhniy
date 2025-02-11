@@ -1,7 +1,16 @@
 import "./_components.js";
 import { burger } from "./functions/burger.js";
 import { Fancybox } from "@fancyapps/ui";
+import "simplebar";
+import ResizeObserver from "resize-observer-polyfill";
+import {
+  OverlayScrollbars,
+  ScrollbarsHidingPlugin,
+  SizeObserverPlugin,
+  ClickScrollPlugin,
+} from "overlayscrollbars";
 
+window.ResizeObserver = ResizeObserver;
 Fancybox.bind("[data-fancybox=builder-gallery]", {});
 
 const header = document.querySelector("header");
@@ -80,3 +89,33 @@ if (videoWrapper.length > 0) {
     });
   });
 }
+
+function updateFontSize() {
+  const html = document.documentElement;
+
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+
+  const aspectRatio = screenWidth / screenHeight;
+  console.log(aspectRatio);
+  if (aspectRatio >= 21 / 9 && screenWidth > 1920) {
+    html.style.fontSize = `10px`;
+  } else if (aspectRatio >= 16 / 10 && screenWidth <= 1920) {
+    html.style.fontSize = `calc(100vw / 192)`;
+  } else if (aspectRatio >= 16 / 9 && screenWidth <= 1920) {
+    html.style.fontSize = `calc(100vw / 192)`;
+  } else {
+    html.style.fontSize = `calc(100vw / 192)`;
+  }
+}
+
+if (window.matchMedia("(min-width: 769px)").matches) {
+  updateFontSize();
+  window.addEventListener("resize", updateFontSize);
+}
+
+OverlayScrollbars(document.querySelector("#myElement"), {
+  overflow: {
+    x: "hidden",
+  },
+});
