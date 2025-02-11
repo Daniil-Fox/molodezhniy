@@ -2,6 +2,8 @@ import "./_components.js";
 import { burger } from "./functions/burger.js";
 import { Fancybox } from "@fancyapps/ui";
 
+Fancybox.bind("[data-fancybox=builder-gallery]", {});
+
 const header = document.querySelector("header");
 const siteContainer = document.querySelector(".site-container");
 let headerHeight = header.scrollHeight;

@@ -105,6 +105,8 @@
             mask: none;
             @include mobile {
               margin-bottom: 0;
+              mask-size: 100% 100%;
+              mask-repeat: no-repeat;
             }
           }
           .gallery-item__info {
@@ -142,7 +144,7 @@
     display: flex;
     justify-content: space-between;
 
-    mask-size: auto;
+    mask-size: 100% 100%;
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: #fff;
@@ -183,18 +185,18 @@
   @include mobile {
     &:nth-child(odd) {
       .gallery-item__img {
-        mask-image: url("./../img/gallery/g-mask-1-mob.svg");
+        mask-image: url("./../img/gallery/g-mask-1-mob.svg") !important;
       }
       .gallery-item__info {
-        mask-image: url("./../img/gallery/info-mask-1-mob.svg");
+        mask-image: url("./../img/gallery/info-mask-1-mob.svg") !important;
       }
     }
     &:nth-child(even) {
       .gallery-item__img {
-        mask-image: url("./../img/gallery/g-mask-2-mob.svg");
+        mask-image: url("./../img/gallery/g-mask-2-mob.svg") !important;
       }
       .gallery-item__info {
-        mask-image: url("./../img/gallery/info-mask-2-mob.svg");
+        mask-image: url("./../img/gallery/info-mask-2-mob.svg") !important;
       }
     }
   }

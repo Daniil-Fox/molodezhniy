@@ -1,7 +1,13 @@
 import { Swiper } from "swiper";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import {
+  EffectFade,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Thumbs,
+} from "swiper/modules";
 
-Swiper.use([Navigation, Pagination, FreeMode]);
+Swiper.use([Navigation, Pagination, FreeMode, EffectFade, Thumbs]);
 new Swiper(".about__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -13,20 +19,6 @@ new Swiper(".about__slider", {
   navigation: {
     prevEl: ".about-prev",
     nextEl: ".about-next",
-  },
-});
-
-new Swiper(".about-benefits__slider", {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  freeMode: true,
-  breakpoints: {
-    320: {
-      spaceBetween: 20,
-    },
-    769: {
-      spaceBetween: 10,
-    },
   },
 });
 
@@ -82,3 +74,31 @@ window.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
   });
 });
+
+let ssSlider = null;
+const tabs = new Swiper(".about-benefits__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  freeMode: true,
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+    },
+    769: {
+      spaceBetween: 10,
+    },
+  },
+});
+ssSlider = new Swiper(".about-benefits__ss", {
+  autoHeight: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  thumbs: {
+    swiper: tabs,
+  },
+});
+export { ssSlider };

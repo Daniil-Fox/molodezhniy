@@ -1,3 +1,4 @@
+import { ssSlider } from "./sliders.js";
 const tabs = document.querySelectorAll("[data-tab]");
 
 if (tabs.length > 0) {
@@ -7,20 +8,15 @@ if (tabs.length > 0) {
     tabs.forEach((el) => {
       el.classList.remove("active");
     });
-    tabsContent.forEach((el) => {
-      el.classList.remove("active");
-    });
   }
 
-  tabs.forEach((t) => {
+  tabs.forEach((t, idx) => {
     t.addEventListener("click", (e) => {
       const dataset = t.dataset.tab;
       e.preventDefault();
       clearActive();
       t.classList.add("active");
-      document
-        .querySelector(`[data-tab-content=${dataset}]`)
-        .classList.add("active");
+      ssSlider.slideTo(idx);
     });
   });
 }
