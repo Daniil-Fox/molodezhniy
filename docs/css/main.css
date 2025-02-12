@@ -255,8 +255,10 @@ a {
   border: 1px solid #ccc;
   border-radius: 1rem;
   width: 4rem;
-  height: 4rem;
+  aspect-ratio: 1/1;
   cursor: pointer;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   text-align: center;
   border: none;
   display: -webkit-box;
@@ -270,6 +272,13 @@ a {
   justify-content: center;
   -webkit-box-shadow: 0 4px 10rem rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 10rem rgba(0, 0, 0, 0.05);
+}
+.custom-zoom-button svg {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 @media (max-width: 768px) {
   .custom-zoom-button {
@@ -1036,6 +1045,14 @@ button:disabled {
 .hero__wrapper {
   position: relative;
 }
+@media (max-width: 768px) {
+  .hero__wrapper {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-image: url("./../img/main-mask-mobile.svg");
+    mask-image: url("./../img/main-mask-mobile.svg");
+  }
+}
 .hero__content {
   background-color: #fff;
   padding: 6rem 8.4rem;
@@ -1043,10 +1060,11 @@ button:disabled {
   padding-right: 11rem;
   max-width: 81.1rem;
   width: 100%;
+  position: relative;
   -webkit-mask-image: url("./../img/mask-content.svg");
   mask-image: url("./../img/mask-content.svg");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+  -webkit-mask-size: auto 100%;
+  mask-size: auto 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
@@ -1104,21 +1122,27 @@ button:disabled {
 .hero__img {
   position: absolute;
   bottom: 0;
-  right: 0.43rem;
+  right: 0rem;
   width: auto;
-  height: 106.8%;
+  height: 107.2%;
   overflow: hidden;
   border-radius: 0 0 3rem 0;
+  -webkit-mask-image: url("./../img/build-mask.svg");
+  mask-image: url("./../img/build-mask.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 @media (max-width: 768px) {
   .hero__img {
     height: 65.6rem;
     width: auto;
+    -webkit-mask: none;
+    mask: none;
   }
 }
 .hero__img img {
   display: block;
-  width: 100%;
+  width: auto;
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
@@ -2013,8 +2037,8 @@ button:disabled {
   top: 0;
   height: 100%;
   width: 66.6rem;
-  -webkit-mask-image: url("./../img/cta-mask.svg");
-  mask-image: url("./../img/cta-mask.svg");
+  -webkit-mask-image: url("./../img/cta-mask-rastr.webp");
+  mask-image: url("./../img/cta-mask-rastr.webp");
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -3923,8 +3947,8 @@ a.footer-add__link:active {
 
 .ben-content:nth-child(6n+1) .ben-content__img,
 .ben-content:nth-child(6n+2) .ben-content__img {
-  -webkit-mask-image: url("./../img/about-benefits/mask1.svg");
-  mask-image: url("./../img/about-benefits/mask1.svg");
+  -webkit-mask-image: url("./../img/about-benefits/mask1-rastr.webp");
+  mask-image: url("./../img/about-benefits/mask1-rastr.webp");
 }
 @media (max-width: 768px) {
   .ben-content:nth-child(6n+1) .ben-content__img,
@@ -3935,8 +3959,8 @@ a.footer-add__link:active {
 }
 
 .ben-content:nth-child(6n+3) .ben-content__img {
-  -webkit-mask-image: url("./../img/about-benefits/mask3.svg");
-  mask-image: url("./../img/about-benefits/mask3.svg");
+  -webkit-mask-image: url("./../img/about-benefits/mask3-rastr.webp");
+  mask-image: url("./../img/about-benefits/mask3-rastr.webp");
 }
 @media (max-width: 768px) {
   .ben-content:nth-child(6n+3) .ben-content__img {
@@ -3946,8 +3970,8 @@ a.footer-add__link:active {
 }
 
 .ben-content:nth-child(6n+4) .ben-content__img {
-  -webkit-mask-image: url("./../img/about-benefits/mask4.svg");
-  mask-image: url("./../img/about-benefits/mask4.svg");
+  -webkit-mask-image: url("./../img/about-benefits/mask4-rastr.webp");
+  mask-image: url("./../img/about-benefits/mask4-rastr.webp");
 }
 @media (max-width: 768px) {
   .ben-content:nth-child(6n+4) .ben-content__img {
@@ -3957,8 +3981,8 @@ a.footer-add__link:active {
 }
 
 .ben-content:nth-child(6n+5) .ben-content__img {
-  -webkit-mask-image: url("./../img/about-benefits/mask5.svg");
-  mask-image: url("./../img/about-benefits/mask5.svg");
+  -webkit-mask-image: url("./../img/about-benefits/mask5-rastr.webp");
+  mask-image: url("./../img/about-benefits/mask5-rastr.webp");
 }
 @media (max-width: 768px) {
   .ben-content:nth-child(6n+5) .ben-content__img {
@@ -3968,8 +3992,8 @@ a.footer-add__link:active {
 }
 
 .ben-content:nth-child(6n+6) .ben-content__img {
-  -webkit-mask-image: url("./../img/about-benefits/mask6.svg");
-  mask-image: url("./../img/about-benefits/mask6.svg");
+  -webkit-mask-image: url("./../img/about-benefits/mask6-rastr.webp");
+  mask-image: url("./../img/about-benefits/mask6-rastr.webp");
 }
 @media (max-width: 768px) {
   .ben-content:nth-child(6n+6) .ben-content__img {

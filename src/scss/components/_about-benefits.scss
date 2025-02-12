@@ -222,7 +222,7 @@
 .ben-content:nth-child(6n + 1),
 .ben-content:nth-child(6n + 2) {
   .ben-content__img {
-    mask-image: url("./../img/about-benefits/mask1.svg");
+    mask-image: url("./../img/about-benefits/mask1-rastr.webp");
     @include mobile {
       mask: none;
     }
@@ -231,7 +231,7 @@
 @for $i from 3 to 7 {
   .ben-content:nth-child(6n + #{$i}) {
     .ben-content__img {
-      mask-image: url("./../img/about-benefits/mask#{$i}.svg");
+      mask-image: url("./../img/about-benefits/mask#{$i}-rastr.webp");
       @include mobile {
         mask: none;
       }

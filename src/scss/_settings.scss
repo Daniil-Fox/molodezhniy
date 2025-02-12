@@ -144,14 +144,21 @@ a {
   border: 1px solid #ccc;
   border-radius: 1rem;
   width: 4rem;
-  height: 4rem;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
+  flex-shrink: 0;
   text-align: center;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10rem rgba(#000, 0.05);
+  svg {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    flex-shrink: 0;
+  }
   @include mobile {
     width: 6rem;
     height: 6rem;

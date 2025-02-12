@@ -46,6 +46,10 @@
   }
   &__wrapper {
     position: relative;
+    @include mobile {
+      mask-size: 100% 100%;
+      mask-image: url("./../img/main-mask-mobile.svg");
+    }
   }
   &__content {
     background-color: #fff;
@@ -54,10 +58,11 @@
     padding-right: 11rem;
     max-width: 81.1rem;
     width: 100%;
-
+    position: relative;
     mask-image: url("./../img/mask-content.svg");
-    mask-size: 100% 100%;
+    mask-size: auto 100%;
     mask-repeat: no-repeat;
+
     @include mobile {
       padding: 4.2rem;
       padding-top: 2.6rem;
@@ -102,22 +107,23 @@
   &__img {
     position: absolute;
     bottom: 0;
-    right: 0.43rem;
+    right: 0rem;
     width: auto;
-    height: 106.8%;
+    height: 107.2%;
     overflow: hidden;
     border-radius: 0 0 3rem 0;
-
+    mask-image: url("./../img/build-mask.svg");
+    mask-size: 100% 100%;
     @include mobile {
       height: 65.6rem;
       width: auto;
+      mask: none;
     }
     img {
       display: block;
-      width: 100%;
+      width: auto;
       height: 100%;
       object-fit: contain;
-
       @include mobile {
         object-position: bottom;
         width: auto;
