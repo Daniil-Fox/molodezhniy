@@ -13,38 +13,65 @@
               <div class="cta-form__inwrapper">
                 <input
                   type="number"
+                  id="loanAmountInput"
                   min="6500000"
+                  max="15000000"
+                  step="100000"
+                  value="6500000"
                   placeholder="от 6 500 000 ₽"
                   class="cta-form__input"
                   id="ct1"
                 />
-                <span></span>
+                <input
+                  type="range"
+                  id="loanAmount"
+                  min="6500000"
+                  max="15000000"
+                  step="100000"
+                  value="6500000"
+                />
               </div>
             </div>
             <div class="cta-form__wrapper">
-              <label for="ct2" class="cta-form__label"
-                >Первоначальный взнос</label
-              >
-              <div class="cta-form__inwrapper" data-after="0%">
+              <label class="cta-form__label">Первоначальный взнос</label>
+              <div class="cta-form__inwrapper" data-after="30%">
                 <input
-                  type="text"
+                  type="number"
                   placeholder="2 235 240 ₽"
                   class="cta-form__input"
-                  id="ct2"
+                  id="annualInterestInput"
                 />
-                <span></span>
+                <input
+                  type="range"
+                  id="annualInterest"
+                  min="30"
+                  max="80"
+                  step="1"
+                  value="30"
+                />
               </div>
             </div>
             <div class="cta-form__wrapper">
-              <label for="ct2" class="cta-form__label">Срок кредита</label>
+              <label class="cta-form__label">Срок кредита</label>
               <div class="cta-form__inwrapper">
                 <input
                   type="text"
                   placeholder="30 лет"
                   class="cta-form__input"
-                  id="ct2"
+                  id="loanTermInput"
+                  min="30"
+                  max="50"
+                  step="1"
+                  value="30"
                 />
-                <span></span>
+                <input
+                  type="range"
+                  id="loanTerm"
+                  min="30"
+                  max="50"
+                  step="1"
+                  value="30"
+                />
               </div>
             </div>
           </div>

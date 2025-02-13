@@ -2413,8 +2413,18 @@ button:disabled {
   transform: translateY(-50%);
   right: 3rem;
 }
+.cta-form__inwrapper input[type=range] {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  z-index: 1;
+  bottom: -0.6rem;
+  height: 1.3rem;
+  border-radius: 100%;
+  background-color: var(--blue);
+}
 .cta-form__inwrapper span {
-  display: inline-block;
+  display: none;
   position: absolute;
   z-index: 1;
   bottom: -0.6rem;

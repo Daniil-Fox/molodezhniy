@@ -114,8 +114,8 @@ if (window.matchMedia("(min-width: 769px)").matches) {
   window.addEventListener("resize", updateFontSize);
 }
 
-OverlayScrollbars(document.querySelector("#myElement"), {
-  overflow: {
-    x: "hidden",
-  },
-});
+// OverlayScrollbars(document.querySelector("#myElement"), {
+//   overflow: {
+//     x: "hidden",
+//   },
+// });
